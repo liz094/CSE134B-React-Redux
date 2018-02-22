@@ -1,6 +1,5 @@
 import React from 'react';
 import {Link} from 'react-router';
-import img from '../../img/main_bg.jpg'
 
 class SignIn extends React.Component {
   render() {
