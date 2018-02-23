@@ -8,12 +8,15 @@ import ManageCoursePage from './components/course/ManageCoursePage'; //eslint-di
 //import SignInPage from './components/sign_in/SignIn';
 
 export default (
-  <Route path="/" component={App}>
+   <Route path="/" component={App}>
     <IndexRoute component={HomePage} />
     <Route path="courses" component={CoursesPage} />
     <Route path="course" component={ManageCoursePage} />
     <Route path="course/:id" component={ManageCoursePage} />
     <Route path="about" component={AboutPage} />
-    
+    <Route path="sign_in" component={Sign_in}/>
+    <Route path="cuisine" component={CuisinePage}/>
+    <Route path="restaurants" component={RestaurantsPage}/>
+    <Route path="restaurantA" component={RestaurantA}/>
   </Route>
 );
