@@ -7,8 +7,8 @@ class SignIn extends React.Component {
         <div>
             <div id="first_line">
             <h1 style={{textAlign: 'center'}}> Sign In
-                <Link to="about" title="back to main" className="back">Home</Link>
-                <Link to="sign_up" title="to sign up page" className="sign_up">No account? Sign Up!</Link>
+                <Link to="Index" title="back to main" className="back">Home</Link>
+                <Link to="SignUp" title="to sign up page" className="sign_up">No account? Sign Up!</Link>
             </h1>
             </div>     
             <form className="container" action="/action_page.php">
@@ -17,8 +17,8 @@ class SignIn extends React.Component {
                 <input type="text" placeholder="Enter Username" name="uname" required />
                 <label style={{color : 'white'}}><b>Password</b></label>
                 <input type="password" placeholder="Enter Password" name="psw" required />
-                <label><a href="sign_up.html"> Forget PassWord?</a> </label>
-                <button onClick="location.href='cuisine.html';" type="submit">Login</button>
+                <label><Link to="sign_up.html"> Forget PassWord?</Link> </label>
+                <Link to="location.href='cuisine.html';" type="submit">Login</Link>
             </div>
             </form>
             <div className="footer">
