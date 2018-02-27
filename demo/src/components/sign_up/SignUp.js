@@ -1,21 +1,23 @@
 import React from 'react';
 import {Link} from 'react-router';
 import '../../styles/sign_up.css';
-
+let bg = "https://i.ytimg.com/vi/pugs6IiyOM4/maxresdefault.jpg";
+let form = {
+  marginTop:100
+};
 class SignUp extends React.Component {
   render() {
     return (
-        <body>
-    <div>
-        <div id="first_line">
-          <h1> Sign Up
-            <Link to="Index" title="back to main" className="back">Home</Link>
-            <Link to="SignIn" title="to sign in page" className="sign_in">Log In</Link>
-          </h1>
-        </div>
-        <p className="already"> Already have an account? </p>
+      <body>
+        <div>
+          <div id="first_line" >
+          <Link to="/" title="back to main" className="back">Home</Link>
+          <Link to="sign_in" title="to sign in page" className="sign_in">Log In</Link>
+            <h1 style = {{textAlign: 'center'}}> Sign Up </h1>
+          </div>
 
-        <form className="modal-content" action="/action.page.php">
+        <p className="already"> Already have an account? </p>
+        <form style = {form} action="/action.page.php">
           <div className="container">
             <p style={{color : 'black'}}>Please fill in this form to create an account.</p>
             <hr />

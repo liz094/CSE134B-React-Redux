@@ -13,8 +13,9 @@ import restaurantA from './components/RestaurantA/RestaurantA';
 export default (
    <Route path="/" component={App}>
     <IndexRoute component={HomePage} />
-    <Route path="sign_in" component={SignUpPage}/>
+    <Route path="sign_up" component={SignUpPage}/>
     <Route path="sign_in" component={SignInPage}/>
+    <Route path = "home" component = {HomePage} />
     {/*
     <Route path="cuisine" component={CuisinePage}/>
     <Route path="restaurants" component={RestaurantsPage}/>
