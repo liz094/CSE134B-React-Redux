@@ -1,0 +1,183 @@
+﻿
+#cartlogout {
+    margin-top:10px;
+    padding-right: 15px;
+    float: right;
+}
+
+#header {
+    border-bottom-style: dashed;
+    border-bottom-color: #a9de25;
+    width: 100%;
+    display: inline-block;
+    height: 63px;
+    min-height: 24px
+}
+
+#cartlogout > p {
+    display: inline-block;
+}
+
+#cart {
+    float: left;
+    background-color: #FF8C00;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer
+
+}
+
+#log_out {
+    float: left;
+    background-color: #8B0000;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer
+}
+
+.selections {
+    margin-left: 5px;
+    margin-right: 5px;
+
+}
+.selection{
+    display:inline-block;
+    margin-left:15px;
+    margin-right:15px;
+}
+
+#cartlogout {
+    padding-right: 15px;
+    float: right;
+}
+
+#cartlogout > p {
+    display: inline-block;
+}
+
+.restaurantName {
+    margin-left: 15px;
+    margin-right: 15px;
+    color: #8B0000;
+    font-size: 340%;
+    font-family: fantasy
+
+}
+
+#tenderGreens {
+    margin-left: 5px;
+    margin-right: 5px;
+    color: green;
+    font-size: 340%;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+
+}
+
+.menuHeading {
+    margin-top: 25px;
+    margin-left: 15px;
+    margin-right: 15px;
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: 200%;
+    font-family: sans-serif
+
+}
+
+
+.amount{
+    text-align:left;
+    display:inline-block;
+}
+
+.button_orange {
+
+    background-color: orange;
+    width: 40%;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+
+    display: inline-block;
+    font-size: 16px;
+    margin: 6px 8px;
+    cursor: pointer;
+}
+
+.food_image{
+    width:300px;
+    height:230px;
+}
+
+.button{
+    height:50px;
+}
+
+.footer {
+    display: block;
+
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+    width: 100%;
+    height: 20px;
+    background-color: #a9de25;
+    margin-top: 50px;
+    left: 0;
+    bottom: 0;
+    text-align: center
+}
+
+    .footer about_us {
+        color: blue;
+        text-align: left
+    }
+
+    .footer contact {
+        padding-left: 4.0em
+    }
+
+
+/* approximately phone sized */
+@media only screen and (max-width: 750px) {
+    #tenderGreens {
+        font-size: 40px;
+    }
+
+    .restaurantName {
+        font-size: 40px;
+    }
+
+    .menuHeading{
+        margin-top:5px;
+        margin-bottom:5px;
+        font-size:30px;
+        
+    } 
+
+    .footer{
+        margin-left:0;
+        margin-right:0;
+        padding:0 0 0 0;
+
+    }
+
+
+
+}

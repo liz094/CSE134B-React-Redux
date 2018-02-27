@@ -24,7 +24,7 @@ class HomePage extends React.Component {
         </div>
 
         <div className="bg-container">
-          <form action="/action_page.php">
+          <form action="/action_page.php" className="gradientColor">
           <p id="formheader">Enter Zip Code:</p>
           <input type="text" name="zipcode" />
 
