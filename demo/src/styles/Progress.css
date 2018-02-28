@@ -14,7 +14,7 @@ div.message_box:hover {
     float: right
 }
 
-#header {
+#headerR {
 
     border-bottom-style: dashed;
     border-bottom-color: #a9de25;
@@ -127,8 +127,6 @@ div.message_box:hover {
     margin-bottom: 5px
 
 }
-
-
 
 .footer {
     width: 100%;

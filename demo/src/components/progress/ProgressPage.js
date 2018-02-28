@@ -16,7 +16,7 @@ class ProgressPage extends React.Component {
     render() {
       return (
           <div>
-              <div id="header">
+              <div id="headerR">
               <IndexLink to ="/" className = "logo">DejaDelivery</IndexLink>
 
               <div id="cartlogout">

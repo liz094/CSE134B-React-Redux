@@ -54,12 +54,12 @@
     cursor: pointer
 }
 
-.selections {
+.selectionsR {
     margin-left: 5px;
     margin-right: 5px;
 
 }
-.selection{
+.selectionR{
     display:inline-block;
     margin-left:15px;
     margin-right:15px;
@@ -95,7 +95,7 @@
 
 }
 
-.menuHeading {
+.menuHeadingR {
     margin-top: 25px;
     margin-left: 15px;
     margin-right: 15px;
