@@ -3,13 +3,11 @@ import {Link} from 'react-router';
 import '../../styles/index.css';
 
 let bg_img = "https://i.ytimg.com/vi/pugs6IiyOM4/maxresdefault.jpg";
-
 let bgStyle = {
   backgroundImage: "url(" + bg_img + ")",
   top: 0,
   left: 0
 };
-
 class HomePage extends React.Component {
   render() {
     return (
@@ -21,7 +19,7 @@ class HomePage extends React.Component {
         </div>
 
         <div className="bg-container">
-          <form action="/action_page.php">
+          <form action="/action_page.php" className="gradientColor">
           <p id="formheader">Enter Zip Code:</p>
           <input type="text" name="zipcode" />
           <Link to="cuisine" className="button">Submit</Link>
