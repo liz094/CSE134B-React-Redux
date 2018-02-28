@@ -1,11 +1,14 @@
 import React from 'react';
+import {IndexLink} from 'react-router';
 
 class AboutPage extends React.Component {
   render() {
     return (
       <div>
         <h1>About</h1>
-        <p>This application uses React, Redux, React Router and a variety of other helpful libraries.</p>
+        <p>DejaDelivery is a client-side web application created by Christine Dai, Yi Yang and Lin Zhou in Winter 2018</p>
+
+        <IndexLink to ="/">Back</IndexLink>
       </div>
     );
   }
