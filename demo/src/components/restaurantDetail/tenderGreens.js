@@ -1,6 +1,8 @@
 import React from 'react';
 import {Link,IndexLink} from 'react-router';
 import '../../styles/restaurantDetail.css';
+import {dish} from '../../scripts/cart.js';
+import {showCartNum} from '../../scripts/restaurantDetail.js';
 
 let logoStyle = {
 
@@ -15,11 +17,10 @@ class tenderGreens extends React.Component {
         <div>
             <title> Tender Greens</title>
 
+            <Link to ="progress">Progress</Link>
+
             <div id="header">
-                <IndexLink to ="/" style={logoStyle}>DejaDelivery</IndexLink>
-{/*}
-                  <b style="font-family: 'Seaweed Script', cursive; font-size: 30px">Delivery</b>      
-      */}
+                <IndexLink to ="/" className = "logo">DejaDelivery</IndexLink>
                 <div id="cartlogout">
                      <script >
                         showCartNum();
@@ -242,5 +243,7 @@ class tenderGreens extends React.Component {
       );
     }
   }
+
+  
   
   export default tenderGreens;

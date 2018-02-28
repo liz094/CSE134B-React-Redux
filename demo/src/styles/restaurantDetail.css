@@ -1,4 +1,11 @@
-﻿
+﻿.logo{
+
+    font-family: fantasy;
+    font-size: 30px;  
+    color: green;
+    margin-top:100px;
+}
+
 #cartlogout {
     margin-top:10px;
     padding-right: 15px;

@@ -1,0 +1,184 @@
+
+
+div.message_box_yellow:hover {
+    background-color: lightgoldenrodyellow;
+
+}
+
+div.message_box:hover {
+    background-color: lightgoldenrodyellow;
+}
+
+#cartlogout {
+    padding-right: 15px;
+    float: right
+}
+
+#header {
+
+    border-bottom-style: dashed;
+    border-bottom-color: #a9de25;
+    width: 100%;
+    display: inline-block;
+    height: 10vh;
+    min-height: 24px
+}
+
+#cartlogout > p {
+    display: inline-block
+}
+
+#log_out {
+    float: left;
+    background-color: darkred;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer
+
+}
+
+.greenbutton {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    width:80px;
+    margin:4px 2px;
+    font-size: 16px;
+    font-family:'Times New Roman', Times, serif;
+
+    cursor: pointer;
+}
+
+.recall {
+    background-color: #4C340F;
+    height:30px;
+    border: none;
+    color: white;
+    padding: 5px 5px 5px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 4px 2px;
+    margin-left:5px;
+    cursor: pointer;
+}
+
+.img{
+    display:block;
+    height:300px;
+    width: 400px;
+}
+
+.send_msg{
+    width:1000px;
+    height:40px;
+    margin-bottom:50px;
+    display:block;
+}
+
+.textbox {
+    height: 30px;
+    width: 700px;
+    font-size: 14px;
+    margin-right: 10px;
+    margin-bottom:0px;
+    display:inline-block;
+
+}
+
+.message_box_orange {
+    background-color: #F4D03F;
+    max-width: 1000px;
+    min-width: 800px;
+    border: 0;
+    padding: 5px;
+    margin-bottom: 5px;
+    margin-top:5px;
+    display: inline-block
+
+}
+
+.message_box_yellow {
+    background-color: #F9E79F;
+    display: inline-block;
+    width:700px;
+    padding: 5px;
+    margin-bottom: 15px;
+
+}
+
+.message_box {
+    width: 700px;
+    display: inline-block;
+    border: 0;
+    padding: 5px;
+    margin-bottom: 5px
+
+}
+
+
+
+.footer {
+    width: 100%;
+    height: 3vh;
+    background-color: #a9de25;
+
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    margin-top:50px;
+
+}
+
+    .footer about_us {
+        color: blue;
+        text-align: left
+    }
+
+    .footer contact {
+        padding-left: 4.0em
+    }
+
+@media only screen and (max-width: 700px) {
+    .message_box_yellow {
+        max-width: 350px;
+        margin-right: 5px;
+        display: inline-block;
+        margin-bottom: 15px;
+    }
+
+    .message_box{
+        max-width: 350px;
+        margin-right: 5px;
+        display:inline-block;
+
+    }
+
+    .textbox{
+        max-width:350px;
+        margin-right:5px;
+    }
+
+    .greenbutton{
+        margin-right:10px;
+    }
+
+    .recall{
+        margin-right:10px;
+        display:inline-block;
+    }
+
+
+}

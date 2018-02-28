@@ -9,6 +9,7 @@ import SignInPage from './components/sign_in/SignIn';
 import CuisinePage from './components/cuisine/CuisinePage';
 import tenderGreens from './components/restaurantDetail/tenderGreens';
 import RestaurantsPage from './components/restaurants/restaurantsPage';
+import ProgressPage from './components/progress/ProgressPage';
 
 export default (
    <Route path="/" component={App}>
@@ -21,5 +22,6 @@ export default (
     <Route path="cuisine" component={CuisinePage}/>
     <Route path="restaurants" component={RestaurantsPage}/>
     <Route path="restaurantA" component={tenderGreens}/>
+    <Route path="progress" component={ProgressPage}/>
   </Route>
 );
