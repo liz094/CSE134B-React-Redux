@@ -1,0 +1,124 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jan 30, 2018, 4:26:36 PM
+    Author     : christinedai
+*/
+body {
+}
+.first_line{
+    width: 100%;
+    display: inline-block;
+    height: 63px;
+    min-height: 24px
+}
+
+ .sign_up {
+     float: right;
+     background-color: #4CAF50;
+     border: none;
+     color: white;
+     padding: 10px 50px;
+     text-align: center;
+     text-decoration: none;
+     display: inline-block;
+     font-size: 16px;
+     margin: 4px 2px;
+     cursor: pointer;
+ }
+ .back{
+     float: left;
+     background-color: #f44336;
+     border: none;
+     color: white;
+     padding: 10px 50px;
+     text-align: center;
+     text-decoration:none;
+     display: inline-block;
+     font-size: 16px;
+     margin: 4px 20px;
+     cursor: pointer;
+ }
+             /* Add padding to container elements */
+ .container {    
+     border: 1px solid black;
+     margin-left: 15%;
+     margin-right:25%;
+ }
+ .selection{
+     margin-top: 10px;
+     border: 1px solid lightblue;   
+     margin-left: 20px;
+     margin-bottom: 10px;
+ }
+ .quantity{
+     float: right;
+     margin-right: 10%;
+ }
+ p.e1{
+     margin-top: 0px;    
+ }
+ .removeItem{
+     margin-top: 20%;   
+ }
+ .total{
+     position: absolute;
+     background-color: lightgray;
+     margin-left: 75%;
+     padding-top: 30px;
+     padding-bottom:30px;
+     padding-left:30px;
+     padding-right:20px;
+ }
+ .big{
+ }
+ .footer {
+    width: 100%;
+    height: 3vh;
+    background-color: #a9de25;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    text-align: center
+}
+.footer about_us {
+    color: blue;
+    text-align: left
+}
+.footer contact {
+    padding-left: 4.0em
+}
+h1{
+    text-align: center;
+}
+img{width: 20%}
+
+
+/* approximately phone sized */
+@media only screen and (max-width: 750px) {
+    #first——line {
+        font-size: 60%;
+
+    }
+    .big{
+
+        width:90%;
+        display:block;
+    }
+
+    .total {
+        display: block;
+        width: 20%;
+        margin-top:100px;
+        margin-left: 350px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        padding-left: 10px;
+        padding-right: 10px
+
+    }
+
+}
