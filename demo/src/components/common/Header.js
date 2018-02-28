@@ -4,14 +4,19 @@ import LoadingDots from './LoadingDots';
 
 const Header = ({loading}) => {
   return (
-    <nav>
-      <IndexLink to="/" activeClassName="active">Home</IndexLink>
-      {" | "}
-      <Link to="/courses" activeClassName="active">Courses</Link>
-      {" | "}
-      <Link to="/about" activeClassName="active">About</Link>
-      {loading && <LoadingDots interval={100} dots={20}/>}
-    </nav>
+    <div id="header">
+    <a href="./Main.html">
+        <b>Delivery</b>      
+    </a>
+    <div id="cartlogout">
+        <p>
+            <a href="./cart.html" id="cart">Cart (0)</a>
+        </p>
+        <p>
+            <a href="./Main.html" id="log_out">Log Out</a>
+        </p>
+    </div>
+</div>
   );
 };
 
