@@ -8,6 +8,11 @@ body {
     font-family: 'Ubuntu', sans-serif;
 }
 
+form{
+    width: 50% ;
+    height: 30%;
+}
+
 
 .gradientColor{
     padding: 2vh 1vh 5vh 1vh;

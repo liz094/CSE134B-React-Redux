@@ -12,6 +12,7 @@ import CuisinePage from './components/cuisine/CuisinePage';
 import tenderGreens from './components/restaurantDetail/tenderGreens';
 import RestaurantsPage from './components/restaurants/restaurantsPage';
 import ProgressPage from './components/progress/ProgressPage';
+import CheckoutPage from './components/checkout/checkout';
 
 export default (
    <Route path="/" component={App}>
@@ -26,6 +27,7 @@ export default (
     <Route path="cuisine" component={CuisinePage}/>
     <Route path="restaurants" component={RestaurantsPage}/>
     <Route path="restaurantA" component={tenderGreens}/>
+    <Route path="checkout" component = {CheckoutPage}/>
     <Route path="progress" component={ProgressPage}/>
   </Route>
 );
