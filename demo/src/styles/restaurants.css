@@ -118,11 +118,13 @@ a:link {
 
 #headingMessage {
     font-size: 9vh;
+    margin: 0px 0px 0px 0px !important;
 }
 
 #selections {
     width: 100%;
     text-align: center;
+    margin-top: 10px;
 }
 
 .selection {
