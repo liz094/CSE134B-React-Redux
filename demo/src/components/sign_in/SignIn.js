@@ -6,20 +6,27 @@ class SignIn extends React.Component {
     return (
         <div>
             <div id="first_line">
-            <h1 style={{textAlign: 'center'}}> Sign In
-                <IndexLink to="/" title="back to main" className="back">Home</IndexLink>
+            <IndexLink to="/" title="back to main" className="back">Home</IndexLink>
                 <Link to="sign_up" title="to sign up page" className="sign_up">No account? Sign Up!</Link>
-            </h1>
+            <h1 style={{textAlign: 'center'}}> Sign In</h1>
             </div>     
             <form className = "myForm" action="/action_page.php">
                 <div className="container">
                     <div className = "margintop">
+                        <p style={{color : 'black'}}>Please fill in this form to create an account.</p>
+                        <hr/>
                         <label><b>Username</b></label>
                         <input type="text" placeholder="Enter Username" name="uname" required />
                         <label style={{color : 'black'}}><b>Password</b></label>
+                        
                         <input type="password" placeholder="Enter Password" name="psw" required />
-                        <label><Link to="sign_up.html"> Forget PassWord?</Link> </label>
+                        <input type="checkbox"/> 
+                        <label style={{color : 'black'}}> &nbsp;&nbsp;&nbsp;Remember Password</label>
                         <br></br>
+                        <br></br>
+                        <label><Link to="sign_up.html"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Forget PassWord?</Link> </label>
+
+
                         <Link to="cuisine" type="submit" className = "submit">Log In</Link>
                     </div>
                 </div>
