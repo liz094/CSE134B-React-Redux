@@ -2,8 +2,6 @@ import React from 'react';
 import {IndexLink, Link} from 'react-router';
 import '../../styles/sign_up.css';
 
-
-
 class SignUp extends React.Component {
   render() {
     return (
@@ -11,7 +9,7 @@ class SignUp extends React.Component {
         <div>
           <div id="first_line" >
           <IndexLink to="/" title="back to main" className="back">Home</IndexLink>
-          <Link to="sign_in" title="to sign in page" className="sign_in">Log In</Link>
+          <Link to="sign_in" title="to sign in page" className="sign_up">Log In</Link>
           <h1 style = {{textAlign: 'center'}}> Sign Up </h1>
           </div>
           <p className="already"> Already have an account? </p>
