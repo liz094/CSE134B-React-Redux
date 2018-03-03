@@ -2,7 +2,7 @@ import React from 'react';
 import {Link,IndexLink} from 'react-router';
 import '../../styles/restaurantDetail.css';
 import {dish} from '../../scripts/cart.js';
-import {showCartNum} from '../../scripts/restaurantDetail.js';
+
 
 let logoStyle = {
 
@@ -23,7 +23,7 @@ class tenderGreens extends React.Component {
                 <IndexLink to ="/" className = "logo">DejaDelivery</IndexLink>
                 <div id="cartlogout">
                      <script >
-                        showCartNum();
+                        
                     </script>
                     <p>
                     <IndexLink to ="/" id="log_out">Log Out</IndexLink>

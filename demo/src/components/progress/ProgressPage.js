@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link, IndexLink} from 'react-router';
-import {showCartNum} from '../../scripts/restaurantDetail.js';
+import MessageList from './messageList';
 import '../../styles/Progress.css';
 
 let img = "https://i.imgur.com/mDuGhif.gif";
@@ -12,8 +12,40 @@ let img_style = {
 };
 
 
+
+let num_msg = 2;
+
+
 class ProgressPage extends React.Component {
+    
+    constructor(props){
+        super(props);
+        this.state = { num_msg: 2, 
+            msg_blocks: {
+                'msg-1' : 'no garlic'
+            }};
+
+
+    }
+
+
+    /*
+    getInitialState(){
+        return({
+            messages:{
+                'msg-1': 'Out of Celery         -----Restaurant'
+            }
+        })
+    }*/
+
+
+
+
+
+
+
     render() {
+    const {messages} = this.props;
       return (
           <div>
               <div id="headerR">
@@ -21,7 +53,7 @@ class ProgressPage extends React.Component {
 
               <div id="cartlogout">
                      <script >
-                        showCartNum();
+                        
                     </script>
                     <p>
                     <IndexLink to ="/" id="log_out">Log Out</IndexLink>
@@ -42,20 +74,25 @@ class ProgressPage extends React.Component {
             <div className="send_msg">
             <p>Leave a note: </p>
                 <span>
-                <textarea className="textbox" id="textarea" ></textarea>
+                <textarea className="textbox" id="textarea" ref = "textarea"></textarea>
                 </span>
 
-                <button className="greenbutton" onClick="send()">Send</button>
+                <button className="greenbutton" onClick={this.send}>Send</button>
             </div>
 
-            <div id="msg_boxes">
+            <div id="msg_boxes" ref="msg_boxes">
 
-<div id="1">
+<div id="1" ref ="one">
     <div className="message_box_yellow" id="msg_box2">
         <span id="msg2"> Out of Spinach            ------Restaurant</span>
     </div>
 </div>
+
+            <MessageList msg_blocks={this.state.msg_blocks} />
 </div>
+
+        
+
 
 
 <div className="footer">
