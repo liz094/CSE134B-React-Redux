@@ -2,7 +2,59 @@ import React from 'react';
 import {Link} from 'react-router';
 import resImg from "../../img/whitecake.svg";
 
+class Restaurant extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      value: null
+    }
+  }
+
+  render() {
+    return (
+      <div className="selection">
+        <div className="itemInfo">
+            <Link to="restaurantA">
+                <img src={resImg} alt="a picture of the restaurant" />
+            </Link>
+            <Link to="restaurantA">
+                <p>Restaurant Name</p>
+            </Link>
+        </div>
+      </div>
+    );
+  }
+}
+
+class Wrapper extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      value: null
+    }
+  }
+
+  render() {
+    return (
+      <div className="wrapper" id="rWrapper">
+      <Restaurant />
+      <Restaurant />
+      <Restaurant />
+      <Restaurant />
+      <Restaurant />
+      <Restaurant />
+      <Restaurant />
+      <Restaurant />
+  </div>
+    );
+  }
+}
+
 class RestaurantsPage extends React.Component {
+    renderMoreRests(n) {
+      return <Restaurant />
+    }
+
     render() {
       return (
         <div>
@@ -25,90 +77,11 @@ class RestaurantsPage extends React.Component {
               <p id="headingMessage" style={{margin: "0px 0px -10px 0px"}}>Restaurants:</p>
           </div>
           <div id="selections" style={{margin: "20 0 0 0"}}>
-              <div className="wrapper" id="rWrapper">
-                  <div className="selection">
-                      <div className="itemInfo">
-                          <Link to="restaurantA">
-                              <img src={resImg} alt="a picture of the restaurant" />
-                          </Link>
-                          <Link to="restaurantA">
-                              <p>Bizzare China</p>
-                          </Link>
-                      </div>
-                  </div>
-                  <div className="selection">
-                      <div className="itemInfo">
-                          <Link to="restaurantA">
-                              <img src={resImg} alt="a picture of the restaurant" />
-                          </Link>
-                          <Link to="restaurantA">
-                              <p>Tender Greens</p>
-                          </Link>
-                      </div>            </div>
-                  <div className="selection">
-                      <div className="itemInfo">
-                          <Link to="restaurantA">
-                              <img src={resImg} alt="a picture of the restaurant" />
-                          </Link>
-                          <Link to="restaurantA">
-                              <p>Restaurant C</p>
-                          </Link>
-                      </div>
-                  </div>
-                  <div className="selection">
-                      <div className="itemInfo">
-                          <Link to="restaurantA">
-                              <img src={resImg} alt="a picture of the restaurant" />
-                          </Link>
-                          <Link to="restaurantA">
-                              <p>Restaurant D</p>
-                          </Link>
-                      </div>            
-                  </div>
-                              <div className="selection">
-                      <div className="itemInfo">
-                          <Link to="restaurantA">
-                              <img src={resImg} alt="a picture of the restaurant" />
-                          </Link>
-                          <Link to="restaurantA">
-                              <p>Restaurant E</p>
-                          </Link>
-                      </div>
-                  </div>
-                  <div className="selection">
-                      <div className="itemInfo">
-                          <Link to="restaurantA">
-                              <img src={resImg} alt="a picture of the restaurant" />
-                          </Link>
-                          <Link to="restaurantA">
-                              <p>Restaurant F</p>
-                          </Link>
-                      </div>            </div>
-                  <div className="selection">
-                      <div className="itemInfo">
-                          <Link to="restaurantA">
-                              <img src={resImg} alt="a picture of the restaurant" />
-                          </Link>
-                          <Link to="restaurantA">
-                              <p>Restaurant G</p>
-                          </Link>
-                      </div>
-                  </div>
-                  <div className="selection">
-                      <div className="itemInfo">
-                          <Link to="restaurantA">
-                              <img src={resImg} alt="a picture of the restaurant" />
-                          </Link>
-                          <Link to="restaurantA">
-                              <p>Restaurant H</p>
-                          </Link>
-                      </div>            
-                  </div>
-              </div>
+            <Wrapper />
           </div>
           <div className="nextWrapper" onclick="displayRestaurantsHard()" style={{cursor: "pointer"}}>
               <div className="nextbutton">
-                  <p>
+                  <p onClick={() => this.renderMoreRests()}>
                       &darr;
                   </p>
               </div>
