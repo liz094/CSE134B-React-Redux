@@ -17,7 +17,7 @@ class tenderGreens extends React.Component {
         <div>
             <title> Tender Greens</title>
 
-            <Link to ="progress">Progress</Link>
+            <Link to ="checkout">Checkout</Link>
 
             <div id="headerR">
                 <IndexLink to ="/" className = "logo">DejaDelivery</IndexLink>
