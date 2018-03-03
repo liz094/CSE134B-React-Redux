@@ -21,13 +21,13 @@ class SignUp extends React.Component {
             <hr/>
          
             <label style={{color : 'black'}}><b>Email</b></label>
-            <input type="text" placeholder="Enter Email" name="email" required />
+            <input className = "signInput" type="text" placeholder="Enter Email" name="email" required />
             <label style={{color : 'black'}}><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="psw" required />
+            <input className = "signInput" type="password" placeholder="Enter Password" name="psw" required />
             <label style={{color : 'black'}}><b>Repeat Password</b></label>
-            <input type="password" placeholder="Repeat Password" name="psw-repeat" required />
+            <input className = "signInput" type="password" placeholder="Repeat Password" name="psw-repeat" required />
             <label style={{color : 'black'}}>
-            <input type="checkbox" defaultChecked="checked" style={{marginBottom: 15}} /> Remember me
+            <input className = "signInput" type="checkbox" defaultChecked="checked" style={{marginBottom: 15}} /> Remember me
             </label>
             <p style={{color : 'gray'}}>By creating an account you agree to our <a href="#" style={{color: 'dodgerblue'}}>Terms and Privacy</a>.</p>
             <div className="clearfix">

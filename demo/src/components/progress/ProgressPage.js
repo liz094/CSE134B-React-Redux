@@ -11,11 +11,6 @@ let img_style = {
   left: 0
 };
 
-
-
-let num_msg = 2;
-
-
 class ProgressPage extends React.Component {
     
     constructor(props){

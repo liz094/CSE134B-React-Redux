@@ -13,16 +13,16 @@ class HomePage extends React.Component {
     return (
       <div>
         <div className="first_line">
-          <h1>Delivery</h1>
-          <Link to="sign_in" className="login">Log In</Link>
+        <Link to="sign_in" className="login">Log In</Link>
           <Link to="sign_up" className = "signup">Sign Up</Link>
+          <h1 style = {{textAlign: 'left'}}>Delivery</h1>
         </div>
 
         <div className="bg-container">
           <form action="/action_page.php" className="gradientColor">
           <p id="formheader">Enter Zip Code:</p>
           <input type="text" name="zipcode" />
-          <Link to="cuisine" className="button">Submit</Link>
+          <Link to="cuisine" className="submitButton">Submit</Link>
           <br />
           </form>
         </div>
