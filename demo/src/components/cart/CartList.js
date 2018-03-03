@@ -1,13 +1,15 @@
 import React, {PropTypes} from 'react';
 import Dish from './Dish';
 
-const CartList = (list) => {
+const CartList = ({dishList}) => {
   return (
     <div>
-        <Dish name = {list[0].name} price = {list[0].price} img = {list[0].img} />
-        {/* {list.map(dish => <Dish {...dish} />)} */}
+      {dishList.map(dish=> <Dish key = {dish.name} {...dish} />)}
     </div>
   );
 };
 
+CartList.propTypes = {
+  dishList: PropTypes.array.isRequired
+};
 export default CartList;
