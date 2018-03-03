@@ -53,7 +53,7 @@ class RestaurantsPage extends React.Component {
     constructor(props) {
       super(props);
       this.state = {
-        rArray: [],
+        rArray: [1,2,3],
         newPush: false
       };
 
