@@ -28,7 +28,7 @@ class CuisinePage extends React.Component {
                 <div className="selection">
                     <div className="itemInfo">
                         <Link to="restaurants" >
-                          <img src="https://drawception.com/panel/drawing/UWOK6336/a-nummy-green-slice-of-cake/" alt="a delicious cake"/>
+                          <img src="https://imgur.com/a/RQns6/" alt="a delicious cake"/>
                           <p>American</p>
                         </Link>
                     </div>
@@ -36,7 +36,7 @@ class CuisinePage extends React.Component {
                 <div className="selection">
                     <div className="itemInfo">
                         <Link to="restaurants" >
-                          <img src="https://drawception.com/panel/drawing/UWOK6336/a-nummy-green-slice-of-cake/" alt="a delicious cake"/>
+                          <img src="https://imgur.com/a/RQns6/" alt="a delicious cake"/>
                           <p>Chinese</p>
                         </Link>
                     </div>
@@ -45,7 +45,7 @@ class CuisinePage extends React.Component {
                     <div className="itemInfo">
                     <div className="itemInfo">
                         <Link to="restaurants" >
-                          <img src="https://drawception.com/panel/drawing/UWOK6336/a-nummy-green-slice-of-cake/" alt="a delicious cake"/>
+                          <img src="https://imgur.com/a/RQns6/" alt="a delicious cake"/>
                           <p>Mexican</p>
                         </Link>
                     </div>
@@ -55,7 +55,7 @@ class CuisinePage extends React.Component {
                     <div className="itemInfo">
                     <div className="itemInfo">
                         <Link to="restaurants" >
-                          <img src="https://drawception.com/panel/drawing/UWOK6336/a-nummy-green-slice-of-cake/" alt="a delicious cake"/>
+                          <img src="https://imgur.com/a/RQns6/" alt="a delicious cake"/>
                           <p>Japanese</p>
                         </Link>
                     </div>
@@ -65,7 +65,7 @@ class CuisinePage extends React.Component {
                     <div className="itemInfo">
                     <div className="itemInfo">
                         <Link to="restaurants" >
-                          <img src="https://drawception.com/panel/drawing/UWOK6336/a-nummy-green-slice-of-cake/" alt="a delicious cake"/>
+                          <img src="https://imgur.com/a/RQns6/" alt="a delicious cake"/>
                           <p>Korean</p>
                         </Link>
                     </div>

@@ -14,7 +14,7 @@ class Restaurant extends React.Component {
       <div className="selection">
         <div className="itemInfo">
             <Link to="restaurantA">
-                <img src="" alt="a picture of the restaurant" />
+                <img src="https://imgur.com/a/RQns6" alt="a picture of the restaurant" />
             </Link>
             <Link to="restaurantA">
                 <p>Restaurant Name</p>
@@ -33,7 +33,7 @@ class Wrapper extends React.Component {
     this.state = {
       //arr: [{name: 1}, {name: 2}, {name: 3}]
       newpush: this.props.set,
-      restList: [1,1,1,1]
+      rArray: props.rArray
     }
 
   }
@@ -41,7 +41,7 @@ class Wrapper extends React.Component {
   render() {
     return (
       <div className="wrapper" id="rWrapper">
-        {restList.map(res => <Restaurant/>)}
+        {this.props.rArray.map(res => <Restaurant/>)}
       </div>
     );
   }
@@ -96,7 +96,11 @@ class RestaurantsPage extends React.Component {
             <Wrapper set={this.state.newPush} rArray={this.state.rArray}/>
           </div>
           <div className="nextWrapper" style={{cursor: "pointer"}}>
-              <div className="nextbutton" onClick={()=>handleClick()}>
+              <div className="nextbutton" onClick={()=>{
+                  // good testing point? Load 3 more restaurants
+                  let newArray = this.state.rArray.concat([1,2,3]);
+                  this.setState({rArray: newArray, newpush: false});
+                }}>
                   <p>
                       &darr;
                   </p>
