@@ -7,48 +7,22 @@ and open the template in the editor.
     Created on : Jan 30, 2018, 4:26:36 PM
     Author     : christinedai
 */
-body {
-}
-.first_line{
+
+.first_line_cart{
     width: 100%;
+    text-align: center;
     display: inline-block;
     height: 63px;
     min-height: 24px
 }
 
- .sign_up {
-     float: right;
-     background-color: #4CAF50;
-     border: none;
-     color: white;
-     padding: 10px 50px;
-     text-align: center;
-     text-decoration: none;
-     display: inline-block;
-     font-size: 16px;
-     margin: 4px 2px;
-     cursor: pointer;
- }
- .back{
-     float: left;
-     background-color: #f44336;
-     border: none;
-     color: white;
-     padding: 10px 50px;
-     text-align: center;
-     text-decoration:none;
-     display: inline-block;
-     font-size: 16px;
-     margin: 4px 20px;
-     cursor: pointer;
- }
              /* Add padding to container elements */
- .container {    
+ .container_cart {    
      border: 1px solid black;
      margin-left: 15%;
      margin-right:25%;
  }
- .selection{
+ .selection_cart{
      margin-top: 10px;
      border: 1px solid lightblue;   
      margin-left: 20px;
@@ -62,7 +36,10 @@ body {
      margin-top: 0px;    
  }
  .removeItem{
-     margin-top: 20%;   
+     margin-top: -5%;   
+ }
+ .removeInput{
+     width: 20%;
  }
  .total{
      position: absolute;
@@ -72,8 +49,6 @@ body {
      padding-bottom:30px;
      padding-left:30px;
      padding-right:20px;
- }
- .big{
  }
  .footer {
     width: 100%;
@@ -95,7 +70,6 @@ h1{
     text-align: center;
 }
 img{width: 20%}
-
 
 /* approximately phone sized */
 @media only screen and (max-width: 750px) {

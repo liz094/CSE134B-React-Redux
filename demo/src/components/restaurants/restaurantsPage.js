@@ -1,6 +1,5 @@
 import React from 'react';
 import {Link} from 'react-router';
-import resImg from "../../img/whitecake.svg";
 
 class RestaurantsPage extends React.Component {
     render() {
@@ -29,7 +28,7 @@ class RestaurantsPage extends React.Component {
                   <div className="selection">
                       <div className="itemInfo">
                           <Link to="restaurantA">
-                              <img src={resImg} alt="a picture of the restaurant" />
+                              <img src="https://wallpapercave.com/cute-cupcake-background" alt="a picture of the restaurant" />
                           </Link>
                           <Link to="restaurantA">
                               <p>Bizzare China</p>
@@ -39,7 +38,7 @@ class RestaurantsPage extends React.Component {
                   <div className="selection">
                       <div className="itemInfo">
                           <Link to="restaurantA">
-                              <img src={resImg} alt="a picture of the restaurant" />
+                              <img src="https://wallpapercave.com/cute-cupcake-background" alt="a picture of the restaurant" />
                           </Link>
                           <Link to="restaurantA">
                               <p>Tender Greens</p>
@@ -48,7 +47,7 @@ class RestaurantsPage extends React.Component {
                   <div className="selection">
                       <div className="itemInfo">
                           <Link to="restaurantA">
-                              <img src={resImg} alt="a picture of the restaurant" />
+                              <img src="https://wallpapercave.com/cute-cupcake-background" alt="a picture of the restaurant" />
                           </Link>
                           <Link to="restaurantA">
                               <p>Restaurant C</p>
@@ -58,7 +57,7 @@ class RestaurantsPage extends React.Component {
                   <div className="selection">
                       <div className="itemInfo">
                           <Link to="restaurantA">
-                              <img src={resImg} alt="a picture of the restaurant" />
+                              <img src="https://wallpapercave.com/cute-cupcake-background" alt="a picture of the restaurant" />
                           </Link>
                           <Link to="restaurantA">
                               <p>Restaurant D</p>
@@ -68,7 +67,7 @@ class RestaurantsPage extends React.Component {
                               <div className="selection">
                       <div className="itemInfo">
                           <Link to="restaurantA">
-                              <img src={resImg} alt="a picture of the restaurant" />
+                              <img src="https://wallpapercave.com/cute-cupcake-background" alt="a picture of the restaurant" />
                           </Link>
                           <Link to="restaurantA">
                               <p>Restaurant E</p>
@@ -78,7 +77,7 @@ class RestaurantsPage extends React.Component {
                   <div className="selection">
                       <div className="itemInfo">
                           <Link to="restaurantA">
-                              <img src={resImg} alt="a picture of the restaurant" />
+                              <img src="https://wallpapercave.com/cute-cupcake-background" alt="a picture of the restaurant" />
                           </Link>
                           <Link to="restaurantA">
                               <p>Restaurant F</p>
@@ -87,7 +86,7 @@ class RestaurantsPage extends React.Component {
                   <div className="selection">
                       <div className="itemInfo">
                           <Link to="restaurantA">
-                              <img src={resImg} alt="a picture of the restaurant" />
+                              <img src="https://wallpapercave.com/cute-cupcake-background" alt="a picture of the restaurant" />
                           </Link>
                           <Link to="restaurantA">
                               <p>Restaurant G</p>
@@ -97,7 +96,7 @@ class RestaurantsPage extends React.Component {
                   <div className="selection">
                       <div className="itemInfo">
                           <Link to="restaurantA">
-                              <img src={resImg} alt="a picture of the restaurant" />
+                              <img src="https://wallpapercave.com/cute-cupcake-background" alt="a picture of the restaurant" />
                           </Link>
                           <Link to="restaurantA">
                               <p>Restaurant H</p>
@@ -106,7 +105,7 @@ class RestaurantsPage extends React.Component {
                   </div>
               </div>
           </div>
-          <div className="nextWrapper" onclick="displayRestaurantsHard()" style={{cursor: "pointer"}}>
+          <div className="nextWrapper" onClick="displayRestaurantsHard()" style={{cursor: "pointer"}}>
               <div className="nextbutton">
                   <p>
                       &darr;
