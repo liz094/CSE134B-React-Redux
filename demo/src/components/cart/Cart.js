@@ -8,10 +8,7 @@ import Dish from './Dish';
 class Cart extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {dishes:[ {name: "Egg",
-            price:"10.99",
-            img: "https://i.stack.imgur.com/ZuAmS.jpg"}],
-    price: "0"};
+        this.state = {dishes:[ {name: "Egg", price:"10.99", img: "https://i.stack.imgur.com/ZuAmS.jpg"}], price: "0"};
     }
 
     render() {
@@ -27,12 +24,12 @@ class Cart extends React.Component {
             </h1>
             </div> 
             <div className="total" id="total" ref = "total">
-            {alert(this.state.price)} 
-                <Total price ={this.state.price}/>
+                <Total price={this.state.price}/>
             </div>
             <div className="container_cart">
             <ul id="myUL">
-                <CartList list={this.state.dishes}/>
+                {alert (this.state.dishes[0].name)}
+                <CartList dishList={this.state.dishes}/>
             </ul>
             </div>
             <div className="footer">

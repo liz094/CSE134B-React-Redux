@@ -10,11 +10,11 @@ const Dish = (props) => {
                     <form action="/action_page.php">
                         <div className = "removeItem">
                         <span> Quantity</span>
-                        <input className = "removeInput" type="text" placeholder = "" name = "quantity" required /> 
+                        <input className = "removeInput" type="text" placeholder = "" name = "quantity"  /> 
                         <br />
                         <br />
                         <br />
-                        <button onClick = {this.remove(this)}> remove </button>
+                        <button /*onClick = {this.remove(this)}*/> remove </button>
                         </div>
                     </form>
                 </div>
@@ -22,6 +22,12 @@ const Dish = (props) => {
             </div>
         </li>
     );
+};
+
+Dish.propTypes = {
+    name: PropTypes.string.isRequired,
+    img: PropTypes.string.isRequired,
+    price: PropTypes.string.isRequired
 };
 
 export default Dish;

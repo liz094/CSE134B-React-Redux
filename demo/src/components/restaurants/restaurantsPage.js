@@ -14,7 +14,7 @@ class Restaurant extends React.Component {
       <div className="selection">
         <div className="itemInfo">
             <Link to="restaurantA">
-                <img src={resImg} alt="a picture of the restaurant" />
+                <img src="DUMMY NEED TO FIX" alt="a picture of the restaurant" />
             </Link>
             <Link to="restaurantA">
                 <p>Restaurant Name</p>
