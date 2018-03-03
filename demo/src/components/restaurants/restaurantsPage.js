@@ -1,6 +1,5 @@
 import React from 'react';
 import {Link} from 'react-router';
-import resImg from "../../img/whitecake.svg";
 
 class Restaurant extends React.Component {
   constructor(props) {
@@ -79,7 +78,7 @@ class RestaurantsPage extends React.Component {
           <div id="selections" style={{margin: "20 0 0 0"}}>
             <Wrapper />
           </div>
-          <div className="nextWrapper" onclick="displayRestaurantsHard()" style={{cursor: "pointer"}}>
+          <div className="nextWrapper" onClick="displayRestaurantsHard()" style={{cursor: "pointer"}}>
               <div className="nextbutton">
                   <p onClick={() => this.renderMoreRests()}>
                       &darr;

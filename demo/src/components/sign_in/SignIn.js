@@ -16,15 +16,15 @@ class SignIn extends React.Component {
                         <p style={{color : 'black'}}>Please fill in this form to create an account.</p>
                         <hr/>
                         <label><b>Username</b></label>
-                        <input type="text" placeholder="Enter Username" name="uname" required />
+                        <input className = "signInput" type="text" placeholder="Enter Username" name="uname" required />
                         <label style={{color : 'black'}}><b>Password</b></label>
                         
-                        <input type="password" placeholder="Enter Password" name="psw" required />
-                        <input type="checkbox"/> 
+                        <input className = "signInput" type="password" placeholder="Enter Password" name="psw" required />
+                        <input className = "signInput" type="checkbox"/> 
                         <label style={{color : 'black'}}> &nbsp;&nbsp;&nbsp;Remember Password</label>
                         <br></br>
                         <br></br>
-                        <label><Link to="sign_up.html"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Forget PassWord?</Link> </label>
+                        <label><Link to="sign_up"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Forget PassWord?</Link> </label>
 
 
                         <Link to="cuisine" type="submit" className = "submit">Log In</Link>

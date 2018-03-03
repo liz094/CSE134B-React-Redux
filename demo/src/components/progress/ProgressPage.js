@@ -11,7 +11,6 @@ let img_style = {
   left: 0
 };
 
-
 class ProgressPage extends React.Component {
     render() {
       return (

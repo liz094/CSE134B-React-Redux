@@ -1,11 +1,10 @@
 // get the list from sessionStorage first
+
 let list = sessionStorage.getItem("list");
 let l = JSON.parse(sessionStorage.getItem("list"));
 
 function remove(e, index){
-	{/*}
-	console.log("e: " + e);
-console.log("index: " + index);*/}
+
 
 	// update to most recent list
 	l = JSON.parse(sessionStorage.getItem("list"));
@@ -140,9 +139,6 @@ function addElement(name, price, img){
 	div3.className = "removeItem";
 	//remove button
 	let button = document.createElement("BUTTON");
-	{/*
-	console.log("a index: " + index);
-	*/}
 	button.setAttribute("onclick", "remove(this," + index +")");
 	t = document.createTextNode("remove");
 	button.appendChild(t);
@@ -176,6 +172,3 @@ function showCart(){
 		addElement(l[i].name, l[i].price, l[i].img);
 	}
 }
-
-
-
