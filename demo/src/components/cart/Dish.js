@@ -7,16 +7,16 @@ const Dish = (props) => {
                 <p> {props.name} </p>
                 <img src ={props.img} alt="a picture of the product" />
                 <div className = "quantity">
-                    <form action="/action_page.php">
+  
                         <div className = "removeItem">
                         <span> Quantity</span>
                         <input className = "removeInput" type="text" placeholder = "" name = "quantity"  /> 
                         <br />
                         <br />
                         <br />
-                        <button /*onClick = {this.remove(this)}*/> remove </button>
+                        <button onClick = {()=> props.removeFunc(props.name)}> remove </button>
                         </div>
-                    </form>
+      
                 </div>
             <p className = "e1"> {"total price is $"+ props.price}</p>
             </div>
@@ -27,7 +27,8 @@ const Dish = (props) => {
 Dish.propTypes = {
     name: PropTypes.string.isRequired,
     img: PropTypes.string.isRequired,
-    price: PropTypes.string.isRequired
+    price: PropTypes.string.isRequired,
+    removeFunc:PropTypes.func
 };
 
 export default Dish;

@@ -78,7 +78,7 @@ class RestaurantsPage extends React.Component {
               <Link to="/">Delivery</Link>
               <div id="cartlogout">
                   <p>
-                    <Link to="/" id="cart">Cart</Link>
+                    <Link to="cart" id="cart">Cart</Link>
                   </p>
                   <p>
                     <Link to="/" id="log_out">Log Out</Link>

@@ -1,15 +1,16 @@
 import React, {PropTypes} from 'react';
 import Dish from './Dish';
 
-const CartList = ({dishList}) => {
+const CartList = (props) => {
   return (
     <div>
-      {dishList.map(dish=> <Dish key = {dish.name} {...dish} />)}
+      {props.dishList.map(dish=> <Dish key = {dish.name} {...dish} removeFunc={props.remove}/>)}
     </div>
   );
 };
 
 CartList.propTypes = {
-  dishList: PropTypes.array.isRequired
+  dishList: PropTypes.array.isRequired,
+  remove: PropTypes.func
 };
 export default CartList;
