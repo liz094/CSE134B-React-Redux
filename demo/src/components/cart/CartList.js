@@ -4,8 +4,7 @@ import Dish from './Dish';
 const CartList = ({dishList}) => {
   return (
     <div>
-      {dishList.map(dish=> <Dish {...dish} />)}
-
+      {dishList.map(dish=> <Dish key = {dish.name} {...dish} />)}
     </div>
   );
 };
