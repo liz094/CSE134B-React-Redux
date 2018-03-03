@@ -18,7 +18,7 @@ const Dish = (props) => {
                         </div>
                     </form>
                 </div>
-            <p className = "e1"> total price is {props.price}</p>
+            <p className = "e1"> {"total price is $"+ props.price}</p>
             </div>
         </li>
     );

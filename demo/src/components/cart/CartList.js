@@ -4,7 +4,8 @@ import Dish from './Dish';
 const CartList = ({dishList}) => {
   return (
     <div>
-        <Dish name = {dishList[0].name} price = {dishList[0].price} img={dishList[0].img} />
+      {dishList.map(dish=> <Dish {...dish} />)}
+
     </div>
   );
 };
