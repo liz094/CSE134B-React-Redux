@@ -10,7 +10,7 @@ const Total = ({list}) => {
         <div>
         <p id = "subtotoal"> {"Subtotal:$ " + price.toFixed(2)} </p>
         <p id = "estTax"> {"Estimated Tax:$ " + (price * 0.075).toFixed(2)} </p>
-        <p id = "deliv"> {"Delivert Fee: $" + (3+ price*0.1).toFixed(2) }</p> 
+        <p id = "deliv"> {"Delivert Fee: $" + (3+ price*0.1).toFixed(2)}</p> 
         <p id = "estTotal"> <b> {"Estimated Total:     $" + (price*1.175 + 3).toFixed(2)} </b></p>   
         </div>  
     );
