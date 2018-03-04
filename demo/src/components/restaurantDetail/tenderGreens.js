@@ -1,8 +1,6 @@
 import React from 'react';
 import {Link,IndexLink} from 'react-router';
 import '../../styles/restaurantDetail.css';
-import {dish} from '../../scripts/cart.js';
-
 
 let logoStyle = {
 
