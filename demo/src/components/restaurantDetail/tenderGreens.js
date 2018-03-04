@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link,IndexLink} from 'react-router';
 import '../../styles/restaurantDetail.css';
-import {dish} from '../../scripts/cart.js';
+//import {dish} from '../../scripts/cart.js';
 
 
 let logoStyle = {
@@ -19,7 +19,7 @@ class Entry extends React.Component {
             price: this.props.price,
             method: this.props.method
         };
-    };
+    }
 
     render() {
         return (

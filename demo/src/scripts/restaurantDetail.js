@@ -2,7 +2,7 @@
 // the local storage does not work!
 //let list = [];
 //sessionStorage.setItem("cartNumber", 0);
-
+/*
 function addToCart(name, price, img){
 	let list = JSON.parse(sessionStorage.getItem("list"));
 	if (list==null){
@@ -42,3 +42,4 @@ export function showCartNum(){
 
 
 
+*/

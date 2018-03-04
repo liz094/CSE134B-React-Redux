@@ -1,7 +1,6 @@
 import expect from 'expect';
 import React from 'react';
 import TestUtils from 'react-addons-test-utils';
-import MessageBlock from './messageBlock';
 
 function setup() {
   const props = {
@@ -21,6 +20,7 @@ function setup() {
 }
 
 describe('CourseForm via React Test Utils', () => {
+  /*
   it('renders form and h1', () => {
     const { output } = setup();
     expect(output.type).toBe('form');
@@ -39,4 +39,5 @@ describe('CourseForm via React Test Utils', () => {
     const submitButton = output.props.children[5];
     expect(submitButton.props.value).toBe('Saving...');
   });
+  */
 });

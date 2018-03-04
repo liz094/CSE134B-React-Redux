@@ -1,5 +1,5 @@
 // get the list from sessionStorage first
-
+/*
 let list = sessionStorage.getItem("list");
 let l = JSON.parse(sessionStorage.getItem("list"));
 
@@ -172,3 +172,4 @@ function showCart(){
 		addElement(l[i].name, l[i].price, l[i].img);
 	}
 }
+*/

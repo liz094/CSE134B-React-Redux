@@ -8,7 +8,7 @@ import SignInPage from './components/sign_in/SignIn';
 import SignUpPage from './components/sign_up/SignUp';
 import CuisinePage from './components/cuisine/CuisinePage';
 import tenderGreens from './components/restaurantDetail/tenderGreens';
-import RestaurantsPage from './components/restaurants/restaurantsPage';
+import RestaurantsPage from './components/restaurants/RestaurantsPage';
 import ProgressPage from './components/progress/ProgressPage';
 import CheckoutPage from './components/checkout/checkout';
 
