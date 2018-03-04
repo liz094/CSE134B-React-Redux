@@ -21,11 +21,9 @@ class Restaurant extends React.Component {
             </Link>
         </div>
       </div>
-    );
+    ); 
   }
 }
-
-let restList = [1,1,1,1,1];
 
 class Wrapper extends React.Component {
   constructor(props) {
