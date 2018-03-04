@@ -1,0 +1,26 @@
+import React from 'react';
+import "../../styles/cuisine.css";
+import {IndexLink, Link} from 'react-router';
+
+class CuisineStyle extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            type: props.type
+        };
+    }
+    render() {
+        return (
+            <div className="selection">
+                <div className="itemInfo">
+                    <Link to="restaurants" >
+                        <img src="https://imgur.com/a/RQns6/" alt="a delicious cake"/>
+                        <p>{this.props.type}</p>
+                    </Link>
+                </div>
+            </div>
+        );
+    }
+}
+
+export default CuisineStyle;

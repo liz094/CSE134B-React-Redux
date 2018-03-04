@@ -1,6 +1,8 @@
 import React from 'react';
 import "../../styles/cuisine.css";
 import {IndexLink, Link} from 'react-router';
+import CuisineStyle from './CuisineStyle';
+
 
 class CuisinePage extends React.Component {
     render() {
@@ -25,52 +27,11 @@ class CuisinePage extends React.Component {
         </div>
         <div id="selections">
             <div className="wrapper">
-                <div className="selection">
-                    <div className="itemInfo">
-                        <Link to="restaurants" >
-                          <img src="https://imgur.com/a/RQns6/" alt="a delicious cake"/>
-                          <p>American</p>
-                        </Link>
-                    </div>
-                </div>
-                <div className="selection">
-                    <div className="itemInfo">
-                        <Link to="restaurants" >
-                          <img src="https://imgur.com/a/RQns6/" alt="a delicious cake"/>
-                          <p>Chinese</p>
-                        </Link>
-                    </div>
-                </div>
-                <div className="selection">
-                    <div className="itemInfo">
-                    <div className="itemInfo">
-                        <Link to="restaurants" >
-                          <img src="https://imgur.com/a/RQns6/" alt="a delicious cake"/>
-                          <p>Mexican</p>
-                        </Link>
-                    </div>
-                    </div>
-                </div>
-                <div className="selection">
-                    <div className="itemInfo">
-                    <div className="itemInfo">
-                        <Link to="restaurants" >
-                          <img src="https://imgur.com/a/RQns6/" alt="a delicious cake"/>
-                          <p>Japanese</p>
-                        </Link>
-                    </div>
-                    </div>
-                </div>
-                <div className="selection">
-                    <div className="itemInfo">
-                    <div className="itemInfo">
-                        <Link to="restaurants" >
-                          <img src="https://imgur.com/a/RQns6/" alt="a delicious cake"/>
-                          <p>Korean</p>
-                        </Link>
-                    </div>
-                    </div>
-                </div>
+                <CuisineStyle type="American"/>
+                <CuisineStyle type="Chinese"/>
+                <CuisineStyle type="Mexican"/>
+                <CuisineStyle type="Japanese"/>
+                <CuisineStyle type="Korean"/>
             </div>
         </div>
         <div className="nextWrapper">

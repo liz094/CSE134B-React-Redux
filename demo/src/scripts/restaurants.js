@@ -2,7 +2,7 @@
 // numred: number of restaurants to load
 function displayRestaurants(restaurants, numrest) {
 	for(let i = 0; i < numrest; i++) {
-
+		console.log("ITS NOT EMPTY YOU SILLY COMPILER");
 	}
 }
 
