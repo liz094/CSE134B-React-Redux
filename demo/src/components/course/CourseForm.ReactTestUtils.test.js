@@ -1,13 +1,12 @@
 import expect from 'expect';
 import React from 'react';
 import TestUtils from 'react-addons-test-utils';
-import CourseForm from './CourseForm';
+import MessageBlock from './messageBlock';
 
-function setup(saving) {
-  let props = {
-    course: {}, saving: saving, errors: {},
-    onSave: () => {},
-    onChange: () => {}
+function setup() {
+  const props = {
+    content: [],
+    remove: ()=>{}
   };
 
   let renderer = TestUtils.createRenderer();

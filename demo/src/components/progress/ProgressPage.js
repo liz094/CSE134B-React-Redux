@@ -16,32 +16,21 @@ class ProgressPage extends React.Component {
     constructor(props){
         super(props);
         this.state = { 
-            textVal : "",
-            msg_blocks: [
-                
-            ]
+            msg_blocks: []
         };
         this.send = this.send.bind(this);
         this.remove = this.remove.bind(this);
     }
 
-
-
     send(){
-
-      //  let msg = this.state.textVal + "1";
+        //  let msg = this.state.textVal + "1";
         let msg = this.refs.msg.value;
        // alert("sending"+msg);
+
          //set the state
-         
          let old = this.state.msg_blocks;
          
          this.setState({msg_blocks:[...old,{content:msg}]});
-         
-     //   this.setState({msg_blocks: [...this.state.msg_blocks,{content: message}]});
-
-      //  this.setState( prevState => ({msg_blocks: [...this.state.msg_blocks,{content:message}]}));
-        //this.setState({num_msg:this.state.num_msg+1});
     }
     
     remove(key){
@@ -54,10 +43,7 @@ class ProgressPage extends React.Component {
                 this.setState({msg_blocks: newMSG});
             }
         }
-    
-
     }
-
 
     render() {
       return (
