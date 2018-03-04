@@ -2,9 +2,6 @@ import React, {PropTypes} from 'react';
 import MessageBlock from './messageBlock';
 
 const MessageList=(props)=>{
-
-  
-
   return (
     <div>
       {props.msg_blocks.map(block =>

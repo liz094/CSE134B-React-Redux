@@ -14,7 +14,8 @@ const MessageBlock = (props) => {
 };
 
 MessageBlock.propTypes = {
-  content: PropTypes.string.isRequired
+  //content: PropTypes.string.isRequired 
+  content: PropTypes.array.isRequired
 };
 
 export default MessageBlock;
