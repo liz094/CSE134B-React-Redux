@@ -1,6 +1,7 @@
 import React from 'react';
 import {Link,IndexLink} from 'react-router';
 import '../../styles/restaurantDetail.css';
+import Entry from "./Entry"
 //import {dish} from '../../scripts/cart.js';
 
 
@@ -9,37 +10,6 @@ let logoStyle = {
     font: 'Seaweed Script',
     size: 30
 };
-
-class Entry extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            img: this.props.img,
-            name: this.props.name,
-            price: this.props.price,
-            method: this.props.method
-        };
-    }
-
-    render() {
-        return (
-            <div className="selectionR">
-                <div className="itemInfoR">
-                    <img className="food_image" src={this.state.img} alt="a picture of the product" width="300" height="230" />
-                    <p><b>{this.state.name}</b></p>
-                    <p>{this.state.price}</p>
-                    <form className="amount">
-                        Amount:<br />
-                        <input type="text" name="amount" />
-                        <br />
-                    </form>
-                    <button onClick="addToCart('Backyard steak salad', 15.00, 'https://raster-static.postmates.com/?url=http%3A%2F%2Fcom.postmates.img.prod.s3.amazonaws.com%2F4eda44ff-839b-41dd-bf81-dc87cc649d70%2Forig.jpg&quality=90&w=0&h=640&mode=auto&v=4')"
-                        className="button_orange" > add to cart </button>
-                </div>
-            </div>
-        );
-    }
-}
 
 class tenderGreens extends React.Component {
     render() {
@@ -77,38 +47,21 @@ class tenderGreens extends React.Component {
 
         <div className="selectionsR">
         <div className="wrapperR">
-            <Entry img="https://raster-static.postmates.com/?url=http%3A%2F%2Fcom.postmates.img.prod.s3.amazonaws.com%2F4eda44ff-839b-41dd-bf81-dc87cc649d70%2Forig.jpg&quality=90&w=0&h=640&mode=auto&v=4" name="Backyard Steak Salad" price="$15.00" method="addToCart('Backyard steak salad', 15.00, 'https://raster-static.postmates.com/?url=http%3A%2F%2Fcom.postmates.img.prod.s3.amazonaws.com%2F4eda44ff-839b-41dd-bf81-dc87cc649d70%2Forig.jpg&quality=90&w=0&h=640&mode=auto&v=4')"/>
-
-            <div className="selectionR">
-                <div className="itemInfoR">
-                    <img className="food_image" src="https://raster-static.postmates.com/?url=http%3A%2F%2Fcom.postmates.img.prod.s3.amazonaws.com%2Fad668337-fe64-473f-82c3-cb1404425e52%2Forig.jpg&amp;quality=90&amp;w=0&amp;h=640&amp;mode=auto&amp;v=4" alt="a picture of the product" width="300" height="230" />
-                    <p><b>BGrilled Chicken Cobb Salad</b></p>
-                    <p>$13.75</p>
-                    <form className="amount">
-                        Amount:<br />
-                        <input type="text" name="amount" />
-                        <br />
-                    </form>
-                    <button onClick= "addToCart('BGrilled Chicken Cobb Salad', 13.75, 'https://raster-static.postmates.com/?url=http%3A%2F%2Fcom.postmates.img.prod.s3.amazonaws.com%2Fad668337-fe64-473f-82c3-cb1404425e52%2Forig.jpg&amp;quality=90&amp;w=0&amp;h=640&amp;mode=auto&amp;v=4')"
-                        className="button_orange" > add to cart </button>
-                </div>
-            </div>
-
-            <div className="selectionR">
-                <div className="itemInfoR">
-                    <img className="food_image" src="https://raster-static.postmates.com/?url=http%3A%2F%2Fcom.postmates.img.prod.s3.amazonaws.com%2Fd691acb3-c673-4b69-962c-d5257c4286b0%2Forig.jpg&quality=90&w=0&h=640&mode=auto&v=4" alt="a picture of the product" width="300" height="230" />
-                    <p><b>Chinese Chicken Salad</b></p>
-                    <p>$13.75</p>
-                    <form className="amount">
-                        Amount:<br />
-                        <input type="text" name="amount" />
-                        <br />
-                    </form>
-                    <button onClick="addToCart('Chinese Chicken Salad', 13.75, 'https://raster-static.postmates.com/?url=http%3A%2F%2Fcom.postmates.img.prod.s3.amazonaws.com%2Fd691acb3-c673-4b69-962c-d5257c4286b0%2Forig.jpg&quality=90&w=0&h=640&mode=auto&v=4')"
-                        className="button_orange" > add to cart 
-                    </button>
-                </div>
-            </div>
+            <Entry 
+                img="https://raster-static.postmates.com/?url=http%3A%2F%2Fcom.postmates.img.prod.s3.amazonaws.com%2F4eda44ff-839b-41dd-bf81-dc87cc649d70%2Forig.jpg&quality=90&w=0&h=640&mode=auto&v=4" 
+                name="Backyard Steak Salad" 
+                price="15.00" 
+                method=""/>
+            <Entry 
+                img="https://raster-static.postmates.com/?url=http%3A%2F%2Fcom.postmates.img.prod.s3.amazonaws.com%2Fad668337-fe64-473f-82c3-cb1404425e52%2Forig.jpg&amp;quality=90&amp;w=0&amp;h=640&amp;mode=auto&amp;v=4"
+                name="BGrilled Chicken Cobb Salad" 
+                price="13.75" 
+                method=""/>
+            <Entry 
+                img="https://raster-static.postmates.com/?url=http%3A%2F%2Fcom.postmates.img.prod.s3.amazonaws.com%2Fd691acb3-c673-4b69-962c-d5257c4286b0%2Forig.jpg&quality=90&w=0&h=640&mode=auto&v=4"
+                name="Chinese Chicken Salad" 
+                price="13.75" 
+                method=""/>
 
             <div className="selectionR">
                 <div className="itemInfoR">
