@@ -4,7 +4,6 @@ let num_msg = 2;
 let block1 = document.getElementById("1");
 
 
-
 function send(){
     let msg = document.getElementById("textarea").value;
 
@@ -40,14 +39,14 @@ function send(){
     box.appendChild(textnode);
 
     let block1 = document.getElementById("1");
-    if(num_msg==2) last_box = block1;
+ 
 
     let msg_boxes = document.getElementById("msg_boxes");
     msg_boxes.insertBefore(block,msg_boxes.firstChild);
 
     num_msg++;
 
-    msgs.push(block);
+
 }
 
 

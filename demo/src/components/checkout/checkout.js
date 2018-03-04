@@ -2,7 +2,21 @@ import React from 'react';
 import {Link, IndexLink} from 'react-router';
 import "../../styles/checkout.css";
 
+
+
 class CheckoutPage extends React.Component {
+
+
+
+remove(id){
+
+    let i = parseInt(id);
+    let msg_boxes = document.getElementById("msg_boxes");
+    let child = document.getElementById(id);
+    msg_boxes.removeChild(child);
+
+}
+
     render() {
       return (
           <div>
