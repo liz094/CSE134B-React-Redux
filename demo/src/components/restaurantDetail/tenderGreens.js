@@ -8,6 +8,37 @@ let logoStyle = {
     size: 30
 };
 
+class Entry extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            img: this.props.img,
+            name: this.props.name,
+            price: this.props.price,
+            method: this.props.method
+        };
+    };
+
+    render() {
+        return (
+            <div className="selectionR">
+                <div className="itemInfoR">
+                    <img className="food_image" src={this.state.img} alt="a picture of the product" width="300" height="230" />
+                    <p><b>{this.state.name}</b></p>
+                    <p>{this.state.price}</p>
+                    <form className="amount">
+                        Amount:<br />
+                        <input type="text" name="amount" />
+                        <br />
+                    </form>
+                    <button onClick="addToCart('Backyard steak salad', 15.00, 'https://raster-static.postmates.com/?url=http%3A%2F%2Fcom.postmates.img.prod.s3.amazonaws.com%2F4eda44ff-839b-41dd-bf81-dc87cc649d70%2Forig.jpg&quality=90&w=0&h=640&mode=auto&v=4')"
+                        className="button_orange" > add to cart </button>
+                </div>
+            </div>
+        );
+    }
+}
+
 class tenderGreens extends React.Component {
     render() {
       return (
@@ -44,20 +75,7 @@ class tenderGreens extends React.Component {
 
         <div className="selectionsR">
         <div className="wrapperR">
-            <div className="selectionR">
-                <div className="itemInfoR">
-                    <img className="food_image" src="https://raster-static.postmates.com/?url=http%3A%2F%2Fcom.postmates.img.prod.s3.amazonaws.com%2F4eda44ff-839b-41dd-bf81-dc87cc649d70%2Forig.jpg&quality=90&w=0&h=640&mode=auto&v=4" alt="a picture of the product" width="300" height="230" />
-                    <p><b>Backyard Steak Salad</b></p>
-                    <p>$15.00</p>
-                    <form className="amount">
-                        Amount:<br />
-                        <input type="text" name="amount" />
-                        <br />
-                    </form>
-                    <button onClick="addToCart('Backyard steak salad', 15.00, 'https://raster-static.postmates.com/?url=http%3A%2F%2Fcom.postmates.img.prod.s3.amazonaws.com%2F4eda44ff-839b-41dd-bf81-dc87cc649d70%2Forig.jpg&quality=90&w=0&h=640&mode=auto&v=4')"
-                        className="button_orange" > add to cart </button>
-                </div>
-            </div>
+            <Entry img="https://raster-static.postmates.com/?url=http%3A%2F%2Fcom.postmates.img.prod.s3.amazonaws.com%2F4eda44ff-839b-41dd-bf81-dc87cc649d70%2Forig.jpg&quality=90&w=0&h=640&mode=auto&v=4" name="Backyard Steak Salad" price="$15.00" method="addToCart('Backyard steak salad', 15.00, 'https://raster-static.postmates.com/?url=http%3A%2F%2Fcom.postmates.img.prod.s3.amazonaws.com%2F4eda44ff-839b-41dd-bf81-dc87cc649d70%2Forig.jpg&quality=90&w=0&h=640&mode=auto&v=4')"/>
 
             <div className="selectionR">
                 <div className="itemInfoR">
