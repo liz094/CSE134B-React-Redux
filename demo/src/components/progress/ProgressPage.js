@@ -18,7 +18,7 @@ class ProgressPage extends React.Component {
         this.state = { 
             textVal : "",
             msg_blocks: [
-                {content: 'no garlic        ---- restaurant'}
+                
             ]
         };
         this.send = this.send.bind(this);
