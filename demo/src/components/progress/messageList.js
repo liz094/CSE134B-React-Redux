@@ -1,41 +1,20 @@
 import React, {PropTypes} from 'react';
 import MessageBlock from './messageBlock';
 
-class MessageList extends React.Component{
+const MessageList=(props)=>{
 
-  send(message){
-    let timestamp = (new Date()).getTime();
+  
 
-    this.props.msg_blocks['msg-'+timestamp] = message;
-    //set the state
-    this.setState({ msg_blocks : this.state.msg_blocks });
-    this.setState({num_msg:this.state.num_msg+1});
-}
-
-remove(key){
-
-/*
-// update the state object
-delete this.state.msg_blocks[msgKey];
-// set the state
-this.setState({ msg_blocks : this.state.msg_blocks });
-this.setState({num_msg:this.state.num_msg-1})
-*/
-}
-render(){
   return (
-    <table className="table">
-
-      <tbody>
-      {this.props.msg_blocks.map(message =>
-        <MessageBlock message={message}/>
+    <div>
+      {props.msg_blocks.map(block =>
+        <MessageBlock key = {block.content} {...block} remove = {props.remove}/>
       )}
-      </tbody>
-    </table>
+</div>
   );
 
-}
-}
+
+};
 
 /*
 const MessageList = ({messages}) => {
@@ -52,7 +31,8 @@ const MessageList = ({messages}) => {
 };*/
 
 MessageList.propTypes = {
-  messages: PropTypes.array.isRequired
+  msg_blocks: PropTypes.array.isRequired,
+  remove: PropTypes.func
 
 };
 

@@ -56,7 +56,7 @@ and open the template in the editor.
     width: 100%;
     height: 3vh;
     background-color: #a9de25;
-    position: fixed;
+
     left: 0;
     bottom: 0;
     text-align: center
@@ -69,7 +69,7 @@ and open the template in the editor.
     padding-left: 4.0em
 }
 h1{
-    text-align: center;
+    /*text-align: center;*/
 }
 img{width: 20%}
 

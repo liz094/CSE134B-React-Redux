@@ -15,32 +15,51 @@ class ProgressPage extends React.Component {
     
     constructor(props){
         super(props);
-        this.state = { num_msg: 2, 
-            msg_blocks: {
-                'msg-1' : 'no garlic'
-            }};
+        this.state = { 
+            textVal : "",
+            msg_blocks: [
+                {content: 'no garlic        ---- restaurant'}
+            ]
+        };
+        this.send = this.send.bind(this);
+        this.remove = this.remove.bind(this);
+    }
 
+
+
+    send(){
+
+      //  let msg = this.state.textVal + "1";
+        let msg = this.refs.msg.value;
+       // alert("sending"+msg);
+         //set the state
+         
+         let old = this.state.msg_blocks;
+         
+         this.setState({msg_blocks:[...old,{content:msg}]});
+         
+     //   this.setState({msg_blocks: [...this.state.msg_blocks,{content: message}]});
+
+      //  this.setState( prevState => ({msg_blocks: [...this.state.msg_blocks,{content:message}]}));
+        //this.setState({num_msg:this.state.num_msg+1});
+    }
+    
+    remove(key){
+        // to be modified
+        let i =0;
+        for (i =0; i< this.state.msg_blocks.length; i++){
+            if (key==this.state.msg_blocks[i].content){
+                let newMSG = this.state.msg_blocks;
+                newMSG.splice(i, 1);
+                this.setState({msg_blocks: newMSG});
+            }
+        }
+    
 
     }
 
 
-    /*
-    getInitialState(){
-        return({
-            messages:{
-                'msg-1': 'Out of Celery         -----Restaurant'
-            }
-        })
-    }*/
-
-
-
-
-
-
-
     render() {
-    const {messages} = this.props;
       return (
           <div>
               <div id="headerR">
@@ -67,15 +86,15 @@ class ProgressPage extends React.Component {
         </div>
           
             <div className="send_msg">
-            <p>Leave a note: </p>
-                <span>
-                <textarea className="textbox" id="textarea" ref = "textarea"></textarea>
-                </span>
 
-                <button className="greenbutton" onClick={this.send}>Send</button>
+            <p>Leave a note: </p>
+            <textarea ref="msg" className="textbox" id="textarea" />
+                <button type="submit" className="greenbutton" onClick={this.send}>Send</button>
+                {/* onClick={(msg) => this.send(msg)} */}
+
             </div>
 
-            <div id="msg_boxes" ref="msg_boxes">
+            <div id="msg_boxes" >
 
 <div id="1" ref ="one">
     <div className="message_box_yellow" id="msg_box2">
@@ -83,11 +102,8 @@ class ProgressPage extends React.Component {
     </div>
 </div>
 
-            <MessageList msg_blocks={this.state.msg_blocks} />
+            <MessageList msg_blocks={this.state.msg_blocks} remove={(content)=> this.remove(content)}/>
 </div>
-
-        
-
 
 
 <div className="footer">

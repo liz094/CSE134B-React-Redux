@@ -1,20 +1,20 @@
 import React, {PropTypes} from 'react';
 import {Link} from 'react-router';
 
-const MessageBlock = ({message}) => {
+const MessageBlock = (props) => {
   return (
-    <div id="1" ref ="msg_blk">
+    <div ref ="msg_blk">
     <div className="message_box_yellow">
-        <span> {message.content}</span>
+        <span> {props.content}</span>
     </div>
-    <button>Recall</button>
+    <button className = "recall" onClick={()=> props.remove(props.content)}>Recall</button>
     </div>
 
   );
 };
 
 MessageBlock.propTypes = {
-  message: PropTypes.string.isRequired
+  content: PropTypes.string.isRequired
 };
 
 export default MessageBlock;
