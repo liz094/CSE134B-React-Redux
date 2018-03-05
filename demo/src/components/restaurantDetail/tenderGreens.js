@@ -11,6 +11,14 @@ let logoStyle = {
     size: 30
 };
 
+/* Personal reference:
+        <Entry 
+            img=""
+            name="" 
+            price="" 
+            method=""/>
+*/
+
 class tenderGreens extends React.Component {
     render() {
       return (
@@ -62,23 +70,11 @@ class tenderGreens extends React.Component {
                 name="Chinese Chicken Salad" 
                 price="13.75" 
                 method=""/>
-
-            <div className="selectionR">
-                <div className="itemInfoR">
-                    <img className="food_image" src="https://raster-static.postmates.com/?url=http%3A%2F%2Fcom.postmates.img.prod.s3.amazonaws.com%2F2eddf82b-b84d-4043-aca8-80bde5f354ee%2Forig.jpg&quality=90&w=0&h=640&mode=auto&v=4" alt="a picture of the product" width="300" height="230" />
-                    <p><b>Happy Vegan Salad</b></p>
-                    <p>$13.75</p>
-                    <form className="amount">
-                        Amount:<br />
-                        <input type="text" name="amount" />
-                        <br />
-                    </form>
-                    <button onClick="addToCart('Happy Vegan Salad', 13.75, 'https://raster-static.postmates.com/?url=http%3A%2F%2Fcom.postmates.img.prod.s3.amazonaws.com%2F2eddf82b-b84d-4043-aca8-80bde5f354ee%2Forig.jpg&quality=90&w=0&h=640&mode=auto&v=4')"
-                        className="button_orange" > add to cart 
-                    </button>
-                </div>
-            </div>
-
+            <Entry 
+                img="https://raster-static.postmates.com/?url=http%3A%2F%2Fcom.postmates.img.prod.s3.amazonaws.com%2F2eddf82b-b84d-4043-aca8-80bde5f354ee%2Forig.jpg&quality=90&w=0&h=640&mode=auto&v=4"
+                name="Happy Vegan Salad" 
+                price="13.75" 
+                method=""/>
         </div>
     </div>
 
@@ -90,70 +86,26 @@ class tenderGreens extends React.Component {
 
     <div className="selectionsR">
         <div className="wrapperR">
-            <div className="selectionR">
-                <div className="itemInfoR">
-                    <img className="food_image" src="https://raster-static.postmates.com/?url=http%3A%2F%2Fcom.postmates.img.prod.s3.amazonaws.com%2Ff2b8dc5a-90b5-4bdf-9edc-e785e652d7ab%2Forig.jpg&quality=90&w=0&h=640&mode=auto&v=4" alt="a picture of the product" width="300" height="230" />
-                    <p><b>Fried Chicken Plate</b></p>
-                    <p>$15.75</p>
-                    <form className="amount">
-                        Amount:<br />
-                        <input type="text" name="amount" />
-                        <br />
-                    </form>
-                    <button onClick="addToCart('Fried Chicken Plate', 15.75, 'https://raster-static.postmates.com/?url=http%3A%2F%2Fcom.postmates.img.prod.s3.amazonaws.com%2Ff2b8dc5a-90b5-4bdf-9edc-e785e652d7ab%2Forig.jpg&quality=90&w=0&h=640&mode=auto&v=4')"
-                        className="button_orange" > add to cart 
-                    </button>
-                </div>
-            </div>
-
-            <div className="selectionR">
-                <div className="itemInfoR">
-                    <img className="food_image" src="https://raster-static.postmates.com/?url=http%3A%2F%2Fcom.postmates.img.prod.s3.amazonaws.com%2F72b92ba0-d830-44c6-b7ab-ddd71e1ff9b5%2Forig.jpg&quality=90&w=0&h=640&mode=auto&v=4" alt="a picture of the product" width="300" height="230" />
-                    <p><b>Salt and Pepper Chicken Plate</b></p>
-                    <p>$13.20</p>
-                    <form className="amount">
-                        Amount:<br />
-                        <input type="text" name="amount" />
-                        <br />
-                    </form>
-                    <button onClick="addToCart('Salt and Pepper Chicken Plate', 13.25, 'https://raster-static.postmates.com/?url=http%3A%2F%2Fcom.postmates.img.prod.s3.amazonaws.com%2F72b92ba0-d830-44c6-b7ab-ddd71e1ff9b5%2Forig.jpg&quality=90&w=0&h=640&mode=auto&v=4')"
-                        className="button_orange" > add to cart 
-                    </button>
-                </div>
-            </div>
-
-            <div className="selectionR">
-                <div className="itemInfoR">
-                    <img className="food_image" src="https://raster-static.postmates.com/?url=http%3A%2F%2Fcom.postmates.img.prod.s3.amazonaws.com%2F4a51db22-e92e-4cf4-9043-8c57338d0797%2Forig.jpg&quality=90&w=0&h=640&mode=auto&v=4" alt="a picture of the product" width="300" height="230" />
-                    <p><b>Falafel Plate</b></p>
-                    <p>$12.65</p>
-                    <form className="amount">
-                        Amount:<br />
-                        <input type="text" name="amount" />
-                        <br />
-                    </form>
-                    <button onClick="addToCart('Falafel Plate', 12.65, 'https://raster-static.postmates.com/?url=http%3A%2F%2Fcom.postmates.img.prod.s3.amazonaws.com%2F4a51db22-e92e-4cf4-9043-8c57338d0797%2Forig.jpg&quality=90&w=0&h=640&mode=auto&v=4')"
-                        className="button_orange" > add to cart 
-                    </button>
-                </div>
-            </div>
-
-            <div className="selectionR">
-                <div className="itemInfoR">
-                    <img className="food_image" src="https://raster-static.postmates.com/?url=http%3A%2F%2Fcom.postmates.img.prod.s3.amazonaws.com%2Fa1dea3b6-accb-4b8d-b2a2-84babd271987%2Forig.jpg&quality=90&w=0&h=640&mode=auto&v=4" alt="a picture of the product" width="300" height="230" />
-                    <p><b>Herb Brushed Tuna Plate</b></p>
-                    <p>$14.30</p>
-                    <form className="amount">
-                        Amount:<br />
-                        <input type="text" name="amount" />
-                        <br />
-                    </form>
-                    <button onClick="addToCart('Herb Brushed Tuna Plate', 14.30, 'https://raster-static.postmates.com/?url=http%3A%2F%2Fcom.postmates.img.prod.s3.amazonaws.com%2Fa1dea3b6-accb-4b8d-b2a2-84babd271987%2Forig.jpg&quality=90&w=0&h=640&mode=auto&v=4')"
-                        className="button_orange" > add to cart 
-                    </button>
-                </div>
-            </div>
-
+        <Entry 
+            img="https://raster-static.postmates.com/?url=http%3A%2F%2Fcom.postmates.img.prod.s3.amazonaws.com%2Ff2b8dc5a-90b5-4bdf-9edc-e785e652d7ab%2Forig.jpg&quality=90&w=0&h=640&mode=auto&v=4"
+            name="Fried Chicken Plate" 
+            price="15.75" 
+            method=""/>
+        <Entry 
+            img="https://raster-static.postmates.com/?url=http%3A%2F%2Fcom.postmates.img.prod.s3.amazonaws.com%2F72b92ba0-d830-44c6-b7ab-ddd71e1ff9b5%2Forig.jpg&quality=90&w=0&h=640&mode=auto&v=4"
+            name="Salt and Pepper Chicken Plate" 
+            price="13.20" 
+            method=""/>
+        <Entry 
+            img="https://raster-static.postmates.com/?url=http%3A%2F%2Fcom.postmates.img.prod.s3.amazonaws.com%2F4a51db22-e92e-4cf4-9043-8c57338d0797%2Forig.jpg&quality=90&w=0&h=640&mode=auto&v=4"
+            name="Falafel Plate" 
+            price="12.65" 
+            method=""/>
+        <Entry 
+            img="https://raster-static.postmates.com/?url=http%3A%2F%2Fcom.postmates.img.prod.s3.amazonaws.com%2Fa1dea3b6-accb-4b8d-b2a2-84babd271987%2Forig.jpg&quality=90&w=0&h=640&mode=auto&v=4"
+            name="Herb Brushed Tuna Plate" 
+            price="14.30" 
+            method=""/>
         </div>
     </div>
 
@@ -166,40 +118,19 @@ class tenderGreens extends React.Component {
 
     <div className="selectionsR">
         <div className="wrapperR">
-            <div className="selectionR">
-                <div className="itemInfoR">
-                    <img className="food_image" src="https://raster-static.postmates.com/?url=http%3A%2F%2Fcom.postmates.img.prod.s3.amazonaws.com%2F277f01d6-8b87-4ede-b182-c3e882945147%2Forig.jpg&quality=90&w=0&h=640&mode=auto&v=4" alt="a picture of the product" width="300" height="230" />
-                    <p><b>Rosted Tomato Soup</b></p>
-                    <p>$5.50</p>
-                    <form className="amount">
-                        Amount:<br />
-                        <input type="text" name="amount" />
-                        <br />
-                    </form>
-                    <button onClick="addToCart('Rosted Tomato Soup', 5.50, 'https://raster-static.postmates.com/?url=http%3A%2F%2Fcom.postmates.img.prod.s3.amazonaws.com%2F277f01d6-8b87-4ede-b182-c3e882945147%2Forig.jpg&quality=90&w=0&h=640&mode=auto&v=4')"
-                        className="button_orange" > add to cart 
-                    </button>
-                </div>
-            </div>
+        <Entry 
+            img="https://raster-static.postmates.com/?url=http%3A%2F%2Fcom.postmates.img.prod.s3.amazonaws.com%2F277f01d6-8b87-4ede-b182-c3e882945147%2Forig.jpg&quality=90&w=0&h=640&mode=auto&v=4"
+            name="Roasted Tomato Soup" 
+            price="5.50" 
+            method=""/>
+        <Entry 
+            img="https://raster-static.postmates.com/?url=http%3A%2F%2Fcom.postmates.img.prod.s3.amazonaws.com%2Fa0a334c0-b92b-4b6c-982b-c2f48520f16e%2Forig.jpg&quality=90&w=0&h=640&mode=auto&v=4"
+            name="Rustic Chicken Soup" 
+            price="5.50" 
+            method=""/>
 
-            <div className="selectionR">
-                <div className="itemInfoR">
-                    <img className="food_image" src="https://raster-static.postmates.com/?url=http%3A%2F%2Fcom.postmates.img.prod.s3.amazonaws.com%2Fa0a334c0-b92b-4b6c-982b-c2f48520f16e%2Forig.jpg&quality=90&w=0&h=640&mode=auto&v=4" alt="a picture of the product" width="300" height="230" />
-                    <p><b>Rustic Chicken Soup</b></p>
-                    <p>$5.50</p>
-                    <form className="amount">
-                        Amount:<br />
-                        <input type="text" name="amount" />
-                        <br />
-                    </form>
-                    <button onClick="addToCart('Rustic Chicken Soup', 5.50, 'https://raster-static.postmates.com/?url=http%3A%2F%2Fcom.postmates.img.prod.s3.amazonaws.com%2Fa0a334c0-b92b-4b6c-982b-c2f48520f16e%2Forig.jpg&quality=90&w=0&h=640&mode=auto&v=4')"
-                        className="button_orange" > add to cart 
-                    </button>
-                </div>
-            </div>
-
-            </div>
         </div>
+    </div>
 
 
         <div className="footer">

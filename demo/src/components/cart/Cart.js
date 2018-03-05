@@ -15,6 +15,7 @@ class Cart extends React.Component {
         */
        this.state = {
         // get the dishes from localStorage   
+        // TODO: figure out why its not displaying duplicates
         dishes: JSON.parse(localStorage.getItem("dishes"))
        };
     }
@@ -25,11 +26,12 @@ class Cart extends React.Component {
             if (name==this.state.dishes[i].name){
                 newDish.splice(i, 1);
                 this.setState({dishes: newDish});
+                break;
             }
         }
         // not sure if this will work
         localStorage.setItem("dishes", JSON.stringify(newDish));
-        alert("dishes array: " + newDish);
+        alert("dishes array: " + localStorage.getItem("dishes"));
         return newDish;
     }
     add(name, price, img){
@@ -54,7 +56,7 @@ class Cart extends React.Component {
             <div className="container_cart">
             <ul id="myUL">
             
-            
+                {alert("dishList: " + this.state.dishes)}
                 <CartList dishList={this.state.dishes} remove={(name)=> this.remove(name)}/>
             </ul>
             </div>

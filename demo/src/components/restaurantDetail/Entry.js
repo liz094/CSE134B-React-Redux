@@ -2,6 +2,9 @@ import React from 'react';
 import {Link,IndexLink} from 'react-router';
 import '../../styles/restaurantDetail.css';
 
+// for the dishes
+let key = 0;
+
 class Entry extends React.Component {
     constructor(props) {
         super(props);
@@ -19,6 +22,8 @@ class Entry extends React.Component {
     saveToLocalStorage(name, price, img) {
         alert("calling saveToLocalStorage");
         let newDish = [];
+        // make a unique key to refer to entries!
+        key++;
         // nothing added yet
         if(JSON.parse(localStorage.getItem("dishes")) === null) {
             newDish = [];
@@ -26,9 +31,9 @@ class Entry extends React.Component {
         else {
             newDish = JSON.parse(localStorage.getItem("dishes"));
         }
-        newDish.push({name: name, price: price, img: img});
+        newDish.push({key: key, name: name, price: price, img: img});
         localStorage.setItem("dishes", JSON.stringify(newDish));
-        alert("dishes array: " + newDish);
+        alert("dishes array: " + localStorage.getItem("dishes"));
     }
 
     // if you want to pass in the dish as an obj...
