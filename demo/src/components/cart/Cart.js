@@ -31,7 +31,6 @@ class Cart extends React.Component {
         }
         // not sure if this will work
         localStorage.setItem("dishes", JSON.stringify(newDish));
-        alert("dishes array: " + localStorage.getItem("dishes"));
         return newDish;
     }
     add(name, price, img){
@@ -46,7 +45,7 @@ class Cart extends React.Component {
                 <Link to= "restaurants" title="back" className="back">back</Link>
                 Shopping Cart
                 <span>
-                <Link to="checkout.html" title="to check out" className="sign_up"> Check out</Link>
+                <Link to="checkout" title="to check out" className="sign_up"> Check out</Link>
                 </span>
             </h1>
             </div> 
@@ -56,7 +55,6 @@ class Cart extends React.Component {
             <div className="container_cart">
             <ul id="myUL">
             
-                {alert("dishList: " + this.state.dishes)}
                 <CartList dishList={this.state.dishes} remove={(name)=> this.remove(name)}/>
             </ul>
             </div>

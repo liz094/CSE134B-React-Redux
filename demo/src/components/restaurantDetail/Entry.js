@@ -20,10 +20,10 @@ class Entry extends React.Component {
     }
 
     saveToLocalStorage(name, price, img) {
-        alert("calling saveToLocalStorage");
         let newDish = [];
         // make a unique key to refer to entries!
         key++;
+        let trueKey = "" + key + name;
         // nothing added yet
         if(JSON.parse(localStorage.getItem("dishes")) === null) {
             newDish = [];
@@ -31,9 +31,8 @@ class Entry extends React.Component {
         else {
             newDish = JSON.parse(localStorage.getItem("dishes"));
         }
-        newDish.push({key: key, name: name, price: price, img: img});
+        newDish.push({key: trueKey, name: name, price: price, img: img});
         localStorage.setItem("dishes", JSON.stringify(newDish));
-        alert("dishes array: " + localStorage.getItem("dishes"));
     }
 
     // if you want to pass in the dish as an obj...
