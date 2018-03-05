@@ -15,8 +15,6 @@ class Entry extends React.Component {
             price: this.props.price,
             method: this.props.method
         };
-
-
     }
 
     saveToLocalStorage(name, price, img) {
