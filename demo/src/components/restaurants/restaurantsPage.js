@@ -3,6 +3,8 @@ import {Link} from 'react-router';
 import Restaurant from "./Restaurant";
 import Wrapper from "./Wrapper";
 
+let key =3;
+
 class RestaurantsPage extends React.Component {
     constructor(props) {
       super(props);

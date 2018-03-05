@@ -1,4 +1,4 @@
-import React, {propTypes} from 'react';
+import React, {PropTypes} from 'react';
 import {Link} from 'react-router';
 import Restaurant from "./Restaurant";
 
@@ -16,16 +16,16 @@ class Wrapper extends React.Component {
     render() {
       return (
         <div className="wrapper" id="rWrapper">
-          {this.props.rArray.map(res => <Restaurant/>)}
+          {this.props.rArray.map(res => <Restaurant key = {res.key}/>)}
         </div>
       );
     }
   }
 
-  // typecheck rArray to make sure its an array
-  //Wrapper.propTypes = {
-  //    rArray: propTypes.array.isRequired
-  //};
+  Wrapper.propTypes = {
+    set: PropTypes.string.isRequired,
+    rArray: PropTypes.array.isRequired
+};
 
 export default Wrapper;
   

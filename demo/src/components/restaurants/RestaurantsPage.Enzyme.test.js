@@ -3,7 +3,7 @@ import expect from 'expect';
 import {mount, shallow, render} from 'enzyme';
 import TestUtils from 'react-addons-test-utils';
 
-import RestaurantsPage from "./RestaurantsPage";
+import RestaurantsPage from "./restaurantsPage";
 import Wrapper from "./Wrapper";
 import Restaurant from "./Restaurant";
 

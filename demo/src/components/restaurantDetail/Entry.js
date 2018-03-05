@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import {Link,IndexLink} from 'react-router';
 import '../../styles/restaurantDetail.css';
 
@@ -57,5 +57,12 @@ class Entry extends React.Component {
         );
     }
 }
+
+Entry.propTypes = {
+    img: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    price: PropTypes.string.isRequired,
+    method:PropTypes.string
+};
 
 export default Entry;
