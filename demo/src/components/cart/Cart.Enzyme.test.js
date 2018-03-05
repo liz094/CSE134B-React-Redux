@@ -9,6 +9,7 @@ import Dish from "./Dish";
 import Total from "./Total";
 
 describe("component Cart", () => {
+    /*
     it("should start with 3 dishes", () => {
         const wrapper = mount(<Cart/>);
         expect(wrapper.find(Dish).length).toBe(3);
@@ -25,4 +26,5 @@ describe("component Cart", () => {
         wrapper.find(".removeItem").find("button").first().simulate("click");
         expect(wrapper.find(Dish).length).toBe(0);
     });
+    */
 });

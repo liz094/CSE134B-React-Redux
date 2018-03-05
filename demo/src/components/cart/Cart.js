@@ -18,7 +18,10 @@ class Cart extends React.Component {
         // TODO: figure out why its not displaying duplicates
         dishes: JSON.parse(localStorage.getItem("dishes"))
        };
+
+       this.remove = this.remove.bind(this);
     }
+    
     remove(name){
         let i =0;
         let newDish = this.state.dishes;
@@ -26,7 +29,6 @@ class Cart extends React.Component {
             if (name==this.state.dishes[i].name){
                 newDish.splice(i, 1);
                 this.setState({dishes: newDish});
-                break;
             }
         }
         // not sure if this will work
@@ -55,7 +57,7 @@ class Cart extends React.Component {
             <div className="container_cart">
             <ul id="myUL">
             
-                <CartList dishList={this.state.dishes} remove={(name)=> this.remove(name)}/>
+                <CartList dishList={this.state.dishes} remove={this.remove}/>
             </ul>
             </div>
             <div className="footer">

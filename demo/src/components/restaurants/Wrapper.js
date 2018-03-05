@@ -16,7 +16,8 @@ class Wrapper extends React.Component {
     render() {
       return (
         <div className="wrapper" id="rWrapper">
-          {this.props.rArray.map(res => <Restaurant/>)}
+          {this.props.rArray.map(res => <Restaurant key = {res.key}/>)}
+          {}
         </div>
       );
     }

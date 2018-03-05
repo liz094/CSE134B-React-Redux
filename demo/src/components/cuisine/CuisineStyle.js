@@ -14,7 +14,7 @@ class CuisineStyle extends React.Component {
             <div className="selection">
                 <div className="itemInfo">
                     <Link to="restaurants" >
-                        <img src="https://imgur.com/a/RQns6/" alt="a delicious cake"/>
+                        <img src="https://i.imgur.com/zOPe5XV.png" alt="a delicious cake"/>
                         <p>{this.props.type}</p>
                     </Link>
                 </div>
