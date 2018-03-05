@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{PropTypes} from 'react';
 import "../../styles/cuisine.css";
 import {IndexLink, Link} from 'react-router';
 
@@ -22,5 +22,9 @@ class CuisineStyle extends React.Component {
         );
     }
 }
+CuisineStyle.propTypes = {
+    type: PropTypes.string.isRequired
+};
+
 
 export default CuisineStyle;

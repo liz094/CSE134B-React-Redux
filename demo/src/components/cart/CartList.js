@@ -12,7 +12,11 @@ const CartList = (props) => {
   }
   return (
     <div>
+<<<<<<< HEAD
       {dishesToDisplay.map(dish=> <Dish key = {dish.name} {...dish} removeFunc={props.remove} list={props.dishesToDisplay}/>)}
+=======
+      {dishesToDisplay.map(dish=> <Dish key = {dish.name} {...dish} removeFunc={props.remove}/>)}
+>>>>>>> 514a4a5fd83ec2b293bbb404eec5fc8cbf2f1461
     </div>
   );
 };

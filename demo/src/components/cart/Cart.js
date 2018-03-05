@@ -10,16 +10,47 @@ class Cart extends React.Component {
         super(props);
         /*
         this.state = { dishes:[ {name: "Backyard Steak Salad", price:"15.00", img: "https://raster-static.postmates.com/?url=http%3A%2F%2Fcom.postmates.img.prod.s3.amazonaws.com%2F4eda44ff-839b-41dd-bf81-dc87cc649d70%2Forig.jpg&quality=90&w=0&h=640&mode=auto&v=4"},
-                                {name: "BGrilled Chicken Cobb Salad", price: "13.75", img: "https://raster-static.postmates.com/?url=http%3A%2F%2Fcom.postmates.img.prod.s3.amazonaws.com%2Fad668337-fe64-473f-82c3-cb1404425e52%2Forig.jpg&amp;quality=90&amp;w=0&amp;h=640&amp;mode=auto&amp;v=4"},
-                                {name: "BGrilled Chicken Cobb Salad2", price: "13.75", img: "https://raster-static.postmates.com/?url=http%3A%2F%2Fcom.postmates.img.prod.s3.amazonaws.com%2Fad668337-fe64-473f-82c3-cb1404425e52%2Forig.jpg&amp;quality=90&amp;w=0&amp;h=640&amp;mode=auto&amp;v=4"}]};
+                            {name: "BGrilled Chicken Cobb Salad", price: "13.75", img: "https://raster-static.postmates.com/?url=http%3A%2F%2Fcom.postmates.img.prod.s3.amazonaws.com%2Fad668337-fe64-473f-82c3-cb1404425e52%2Forig.jpg&amp;quality=90&amp;w=0&amp;h=640&amp;mode=auto&amp;v=4"},
+                            {name: "BGrilled Chicken Cobb Salad2", price: "13.75", img: "https://raster-static.postmates.com/?url=http%3A%2F%2Fcom.postmates.img.prod.s3.amazonaws.com%2Fad668337-fe64-473f-82c3-cb1404425e52%2Forig.jpg&amp;quality=90&amp;w=0&amp;h=640&amp;mode=auto&amp;v=4"}]};
         */
-       this.state = {
+
+        let ls = JSON.parse(localStorage.getItem("dishes"));
+        if (ls==null){
+            ls = [];  
+        }
+        let dummy = []; 
+        let i = 0;
+        for ( i=0 ;i< ls.length; i++){
+            let dish = ls[i];
+            let j =0;
+            let length = dummy.length+1;
+            for (j=0; j< length; j++){
+                if (dummy[j].name==dish.name){
+                    dummy[j].quantity++;
+                }
+                else{
+                    dummy.push({name:dish.name, price: dish.price, img: dish.img, quantity:1});
+                    break;
+                }
+            }
+        }
+
+        this.state = {
         // get the dishes from localStorage   
         // TODO: figure out why its not displaying duplicates
+<<<<<<< HEAD
         dishes: JSON.parse(localStorage.getItem("dishes"))
        };
 
        this.remove = this.remove.bind(this);
+=======
+        //dishes: JSON.parse(localStorage.getItem("dishes"))
+        dishes: dummy};
+
+        alert(dummy.length);
+
+        this.remove = this.remove.bind(this);
+>>>>>>> 514a4a5fd83ec2b293bbb404eec5fc8cbf2f1461
     }
     
     remove(name){

@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link,IndexLink} from 'react-router';
 import '../../styles/restaurantDetail.css';
-import Entry from "./Entry"
+import Entry from "./Entry";
 //import {dish} from '../../scripts/cart.js';
 
 
@@ -11,14 +11,6 @@ let logoStyle = {
     size: 30
 };
 
-/* Personal reference:
-        <Entry 
-            img=""
-            name="" 
-            price="" 
-            method=""/>
-*/
-
 class tenderGreens extends React.Component {
     render() {
       return (
@@ -26,15 +18,11 @@ class tenderGreens extends React.Component {
         <div>
             <title> Tender Greens</title>
 
-            <Link to ="checkout">Checkout</Link>
-
             <div id="headerR">
                 <IndexLink to ="/" className = "logo">DejaDelivery</IndexLink>
                 <div id="cartlogout">
-                     <script >
-                        
-                    </script>
                     <p>
+                    <Link to = "cart" id = "cart"> Cart </Link>
                     <IndexLink to ="/" id="log_out">Log Out</IndexLink>
                     </p>
                 </div>
