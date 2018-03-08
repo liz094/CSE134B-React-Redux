@@ -8,6 +8,10 @@ and open the template in the editor.
     Author     : christinedai
 */
 
+li {
+    list-style: none;
+}
+
 .first_line_cart{
     width: 100%;
     text-align: center;
@@ -20,7 +24,8 @@ and open the template in the editor.
  .container_cart {    
      border: 1px solid black;
      margin-left: 15%;
-     margin-right:25%;
+     margin-right:26%;
+     min-height: 240px;
  }
  .selection_cart{
      margin-top: 10px;
