@@ -49,7 +49,7 @@ class RestaurantsPage extends React.Component {
               <p id="headingMessage" style={{margin: "0px 0px -10px 0px"}}>Restaurants:</p>
           </div>
           <div id="selections" style={{margin: "20 0 0 0"}}>
-            <Wrapper set={this.state.newPush} rArray={this.state.rArray}/>
+            <Wrapper set={"IDK whatever"} rArray={this.state.rArray}/>
           </div>
           <div className="nextWrapper" style={{cursor: "pointer"}}>
               <div className="nextbutton" onClick={()=>{
