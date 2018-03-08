@@ -37,9 +37,9 @@ remove(id){
 
              <div id="categoryHeadingR">
             <p>
-                {/* 
+                {
                 <Link to ="cart" >Back</Link>
-                */}
+                }
             </p>
             
             <h1 className="page_heading">Checkout</h1>
