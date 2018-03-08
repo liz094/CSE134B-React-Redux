@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{PropTypes} from 'react';
 import "../../styles/cuisine.css";
 import {IndexLink, Link} from 'react-router';
 
@@ -14,7 +14,7 @@ class CuisineStyle extends React.Component {
             <div className="selection">
                 <div className="itemInfo">
                     <Link to="restaurants" >
-                        <img src="https://imgur.com/a/RQns6/" alt="a delicious cake"/>
+                        <img src="https://i.imgur.com/zOPe5XV.png" alt="a delicious cake"/>
                         <p>{this.props.type}</p>
                     </Link>
                 </div>
@@ -22,5 +22,9 @@ class CuisineStyle extends React.Component {
         );
     }
 }
+CuisineStyle.propTypes = {
+    type: PropTypes.string.isRequired
+};
+
 
 export default CuisineStyle;

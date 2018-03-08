@@ -1,6 +1,9 @@
 import React, {PropTypes} from 'react';
 
 const Total = ({list}) => {
+    if(list === null) {
+        list = [];
+    }
     let i =0;
     let price =0;
     for (i =0; i< list.length; i++){

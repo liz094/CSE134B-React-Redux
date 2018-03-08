@@ -10,7 +10,7 @@ const Dish = (props) => {
   
                         <div className = "removeItem">
                         <span> Quantity</span>
-                        <input className = "removeInput" type="text" placeholder = "" name = "quantity"  /> 
+                        <p className = "removeInput"> {props.quantity} </p> 
                         <br />
                         <br />
                         <br />

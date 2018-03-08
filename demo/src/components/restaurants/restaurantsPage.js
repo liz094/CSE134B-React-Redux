@@ -3,11 +3,13 @@ import {Link} from 'react-router';
 import Restaurant from "./Restaurant";
 import Wrapper from "./Wrapper";
 
+let key =3;
+
 class RestaurantsPage extends React.Component {
     constructor(props) {
       super(props);
       this.state = {
-        rArray: [1,2,3],
+        rArray: [{key: 0},{key: 1},{key: 2}],
         newPush: false
       };
 
@@ -52,7 +54,7 @@ class RestaurantsPage extends React.Component {
           <div className="nextWrapper" style={{cursor: "pointer"}}>
               <div className="nextbutton" onClick={()=>{
                   // good testing point? Load 3 more restaurants
-                  let newArray = this.state.rArray.concat([1,2,3]);
+                  let newArray = this.state.rArray.concat([{key: key++}, {key: key++}, {key: key++}]);
                   this.setState({rArray: newArray, newpush: false});
                 }}>
                   <p>

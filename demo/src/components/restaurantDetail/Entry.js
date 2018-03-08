@@ -1,6 +1,9 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import {Link,IndexLink} from 'react-router';
 import '../../styles/restaurantDetail.css';
+
+// for the dishes
+let key = 0;
 
 class Entry extends React.Component {
     constructor(props) {
@@ -12,13 +15,13 @@ class Entry extends React.Component {
             price: this.props.price,
             method: this.props.method
         };
-
-
     }
 
     saveToLocalStorage(name, price, img) {
-        alert("calling saveToLocalStorage");
         let newDish = [];
+        // make a unique key to refer to entries!
+        key++;
+        let trueKey = "" + key + name;
         // nothing added yet
         if(JSON.parse(localStorage.getItem("dishes")) === null) {
             newDish = [];
@@ -26,9 +29,8 @@ class Entry extends React.Component {
         else {
             newDish = JSON.parse(localStorage.getItem("dishes"));
         }
-        newDish.push({name: name, price: price, img: img});
+        newDish.push({key: trueKey, name: name, price: price, img: img});
         localStorage.setItem("dishes", JSON.stringify(newDish));
-        alert("dishes array: " + newDish);
     }
 
     // if you want to pass in the dish as an obj...
@@ -55,5 +57,12 @@ class Entry extends React.Component {
         );
     }
 }
+
+Entry.propTypes = {
+    img: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    price: PropTypes.string.isRequired,
+    method:PropTypes.string
+};
 
 export default Entry;

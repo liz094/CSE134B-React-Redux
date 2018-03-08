@@ -7,11 +7,6 @@ class App extends React.Component {
   render() {
     return (
       <div>
-      {/*
-        <Header
-          loading={this.props.loading}
-        />
-      */}
         {this.props.children}
       </div>
     );
