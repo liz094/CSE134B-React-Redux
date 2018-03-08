@@ -17,11 +17,7 @@ class Wrapper extends React.Component {
       return (
         <div className="wrapper" id="rWrapper">
           {this.props.rArray.map(res => <Restaurant key = {res.key}/>)}
-<<<<<<< HEAD
-          {}
-=======
->>>>>>> 514a4a5fd83ec2b293bbb404eec5fc8cbf2f1461
-        </div>
+        </div> 
       );
     }
   }

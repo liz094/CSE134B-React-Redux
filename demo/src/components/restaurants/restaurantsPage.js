@@ -3,11 +3,7 @@ import {Link} from 'react-router';
 import Restaurant from "./Restaurant";
 import Wrapper from "./Wrapper";
 
-<<<<<<< HEAD
-let key = 3;
-=======
 let key =3;
->>>>>>> 514a4a5fd83ec2b293bbb404eec5fc8cbf2f1461
 
 class RestaurantsPage extends React.Component {
     constructor(props) {

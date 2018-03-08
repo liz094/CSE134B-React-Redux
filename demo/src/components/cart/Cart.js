@@ -20,12 +20,13 @@ class Cart extends React.Component {
         }
         let dummy = []; 
         let i = 0;
+        
         for ( i=0 ;i< ls.length; i++){
             let dish = ls[i];
             let j =0;
             let length = dummy.length+1;
             for (j=0; j< length; j++){
-                if (dummy[j].name==dish.name){
+                if (dummy[j] != undefined && dummy[j].name==dish.name){
                     dummy[j].quantity++;
                 }
                 else{
@@ -38,19 +39,10 @@ class Cart extends React.Component {
         this.state = {
         // get the dishes from localStorage   
         // TODO: figure out why its not displaying duplicates
-<<<<<<< HEAD
-        dishes: JSON.parse(localStorage.getItem("dishes"))
-       };
-
-       this.remove = this.remove.bind(this);
-=======
         //dishes: JSON.parse(localStorage.getItem("dishes"))
         dishes: dummy};
 
-        alert(dummy.length);
-
         this.remove = this.remove.bind(this);
->>>>>>> 514a4a5fd83ec2b293bbb404eec5fc8cbf2f1461
     }
     
     remove(name){
