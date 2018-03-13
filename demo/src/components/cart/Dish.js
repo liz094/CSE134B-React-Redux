@@ -1,6 +1,6 @@
 import React, {PropTypes} from 'react';
 
-const Dish = (props) => {
+const Dish = ({props}) => {
     return (
         <li>
             <div id = {props.name} className = "selection_cart">

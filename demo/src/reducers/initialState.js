@@ -1,5 +1,10 @@
 export default {
   authors: [],
   courses: [],
-  ajaxCallsInProgress: 0
+  items: [],
+  total: 0,
+  ajaxCallsInProgress: 0,
+
+
+  dishes: []
 };

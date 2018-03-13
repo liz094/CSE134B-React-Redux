@@ -1,11 +1,14 @@
 import React, {PropTypes} from 'react';
 import {Link,IndexLink} from 'react-router';
 import '../../styles/restaurantDetail.css';
+import Dish from '../cart/Dish';
+import * as cartActions from '../../actions/cartActions';
+import toastr from 'toastr';
 
 // for the dishes
 let key = 0;
 
-class Entry extends React.Component {
+class ManageRestaurantDetailPage extends React.Component {
     constructor(props) {
         super(props);
         this.saveToLocalStorage = this.saveToLocalStorage.bind(this);
@@ -16,6 +19,20 @@ class Entry extends React.Component {
             method: this.props.method
         };
     }
+
+    /** method to save a dish to cart by dispatching a save dish action */
+    //TODO take amount as a parameter
+    saveDishToStore(name, price,img){
+
+
+        let dish = new Dish();
+        let dish = new Dish(name, price, img);
+
+
+        cartActions.saveDish(dish)
+        .then(alert('saved '+name+' to cart!'))
+        .catch(error=> {toastr.error(error);});
+}
 
     saveToLocalStorage(name, price, img) {
         let newDish = [];
@@ -50,7 +67,7 @@ class Entry extends React.Component {
                         <input type="text" name="amount" />
                         <br />
                     </form>
-                    <button onClick={() => this.saveToLocalStorage(this.state.name, this.state.price, this.state.img)}
+                    <button onClick={() => this.saveDishToStore(this.state.name, this.state.price, this.state.img)}
                         className="button_orange" > add to cart </button>
                 </div>
             </div>
@@ -58,11 +75,11 @@ class Entry extends React.Component {
     }
 }
 
-Entry.propTypes = {
+ManageRestaurantDetailPage.propTypes = {
     img: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     price: PropTypes.string.isRequired,
     method:PropTypes.string
 };
 
-export default Entry;
+export default ManageRestaurantDetailPage;
