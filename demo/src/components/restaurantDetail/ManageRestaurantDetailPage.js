@@ -24,11 +24,10 @@ class ManageRestaurantDetailPage extends React.Component {
     saveDishToStore(){
         alert("CART LENGTH IS: "+ this.props.dishes.length)
         alert("ADD to CART: "+ this.state.dish.name)
-        /* For Testing
+        /* For Testing */
         for(let i=0; i< this.props.dishes.length;i++){
             console.log(this.props.dishes[i].name);
         }
-        */
 
         this.props.actions.saveDish(this.state.dish).then(()=>toastr.success('Dish saved'))
         .catch(error=> {toastr.error(error);});
