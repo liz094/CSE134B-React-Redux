@@ -1,5 +1,7 @@
 import React, {PropTypes} from 'react';
 import {Link,IndexLink} from 'react-router';
+import {bindActionCreators} from 'redux';
+import {connect} from 'react-redux';
 import '../../styles/restaurantDetail.css';
 import Dish from '../cart/Dish';
 import * as cartActions from '../../actions/cartActions';
@@ -12,25 +14,26 @@ class ManageRestaurantDetailPage extends React.Component {
     constructor(props) {
         super(props);
         this.saveToLocalStorage = this.saveToLocalStorage.bind(this);
+
+        this.state = {
+            dish: Object.assign({},props.dish)
+          };
+          /*
         this.state = {
             img: this.props.img,
             name: this.props.name,
             price: this.props.price,
             method: this.props.method
-        };
+        };*/
+
+        this.saveDishToStore = this.saveDishToStore.bind(this);
     }
 
     /** method to save a dish to cart by dispatching a save dish action */
     //TODO take amount as a parameter
-    saveDishToStore(name, price,img){
+    saveDishToStore(event){
 
-
-        let dish = new Dish();
-        let dish = new Dish(name, price, img);
-
-
-        cartActions.saveDish(dish)
-        .then(alert('saved '+name+' to cart!'))
+        this.props.actions.saveDish(this.state.dish).then(()=>toastr.success('Dish saved'))
         .catch(error=> {toastr.error(error);});
 }
 
@@ -76,10 +79,38 @@ class ManageRestaurantDetailPage extends React.Component {
 }
 
 ManageRestaurantDetailPage.propTypes = {
+    dish: PropTypes.object.isRequired
+    /*,
     img: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     price: PropTypes.string.isRequired,
-    method:PropTypes.string
+    method:PropTypes.string*/
 };
 
-export default ManageRestaurantDetailPage;
+function getDishById(dishes, id) {
+    const dish = dishes.filter(dish => dish.key == id);
+    if (dish) return dish[0]; //since filter returns an array, have to grab the first.
+    return null;
+  }
+
+function mapStateToProps(state, ownProps) {
+    const dishKey = null;
+    //ownProps.dish.key; // from the path `/course/:id`
+  
+    let dish = {key: '', name: '', img: '', price: ''};
+  
+    if (dishKey && state.dishes.length > 0) {
+      dish = getDishById(state.dishes, dishKey);
+    }
+    return {
+        dish: dish
+      };
+}
+
+function mapDispatchToProps(dispatch) {
+    return {
+      actions: bindActionCreators(cartActions, dispatch)
+    };
+  }
+
+export default connect(mapStateToProps, mapDispatchToProps)(ManageRestaurantDetailPage);

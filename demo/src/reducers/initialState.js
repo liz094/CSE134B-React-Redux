@@ -1,8 +1,7 @@
 export default {
   authors: [],
   courses: [],
-  items: [],
-  total: 0,
+  //total: 0,
   ajaxCallsInProgress: 0,
 
 

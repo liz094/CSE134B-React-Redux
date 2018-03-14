@@ -1,4 +1,11 @@
+import delay from './delay';
 
+const dishes = [];
+
+
+function replaceAll(str, find, replace) {
+  return str.replace(new RegExp(find, 'g'), replace);
+}
 
 //This would be performed on the server in a real app. Just stubbing in.
 const generateId = (dish) => {

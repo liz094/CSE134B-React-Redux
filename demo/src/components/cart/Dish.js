@@ -1,6 +1,12 @@
 import React, {PropTypes} from 'react';
 
-const Dish = ({props}) => {
+class Dish extends React.Component{
+    constructor(props){
+        super(props);
+        alert('props.name is '+props.name);
+    }
+
+    render(){
     return (
         <li>
             <div id = {props.name} className = "selection_cart">
@@ -22,6 +28,7 @@ const Dish = ({props}) => {
             </div>
         </li>
     );
+    }// end of render
 };
 
 Dish.propTypes = {
