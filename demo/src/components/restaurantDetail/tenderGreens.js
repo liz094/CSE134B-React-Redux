@@ -41,11 +41,12 @@ class tenderGreens extends React.Component {
 
         <div className="selectionsR">
         <div className="wrapperR">
-            <ManageRestaurantDetailPage 
-                img="https://raster-static.postmates.com/?url=http%3A%2F%2Fcom.postmates.img.prod.s3.amazonaws.com%2F4eda44ff-839b-41dd-bf81-dc87cc649d70%2Forig.jpg&quality=90&w=0&h=640&mode=auto&v=4" 
-                name="Backyard Steak Salad" 
-                price="15.00" 
-                method=""/>
+            <ManageRestaurantDetailPage
+                img="https://raster-static.postmates.com/?url=http%3A%2F%2Fcom.postmates.img.prod.s3.amazonaws.com%2F4eda44ff-839b-41dd-bf81-dc87cc649d70%2Forig.jpg&quality=90&w=0&h=640&mode=auto&v=4"
+                name="Backyard Steak Salad"
+                price= "15.00"
+                method = ""
+            />
             <ManageRestaurantDetailPage 
                 img="https://raster-static.postmates.com/?url=http%3A%2F%2Fcom.postmates.img.prod.s3.amazonaws.com%2Fad668337-fe64-473f-82c3-cb1404425e52%2Forig.jpg&amp;quality=90&amp;w=0&amp;h=640&amp;mode=auto&amp;v=4"
                 name="BGrilled Chicken Cobb Salad" 

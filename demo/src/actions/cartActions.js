@@ -39,9 +39,6 @@ export function saveDish(dish){
         return CartApi.addDish(dish).then(dish => {
             dish.key? dispatch(updateDishSuccess(dish)):
             dispatch(addDishSuccess(dish));
-            // update amount/ add new item
-            //TODO deal with amount = 0
-
         }).catch(error => {
             dispatch(ajaxCallError(error));
             throw(error);

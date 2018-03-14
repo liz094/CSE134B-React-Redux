@@ -13,64 +13,41 @@ let key = 0;
 class ManageRestaurantDetailPage extends React.Component {
     constructor(props) {
         super(props);
-        this.saveToLocalStorage = this.saveToLocalStorage.bind(this);
-
         this.state = {
-            dish: Object.assign({},props.dish)
+            dish: {name: this.props.name, price: this.props.price, img: this.props.img}
           };
-          /*
-        this.state = {
-            img: this.props.img,
-            name: this.props.name,
-            price: this.props.price,
-            method: this.props.method
-        };*/
 
-        this.saveDishToStore = this.saveDishToStore.bind(this);
     }
 
     /** method to save a dish to cart by dispatching a save dish action */
     //TODO take amount as a parameter
-    saveDishToStore(event){
+    saveDishToStore(){
+        alert("CART LENGTH IS: "+ this.props.dishes.length)
+        alert("ADD to CART: "+ this.state.dish.name)
+        /* For Testing
+        for(let i=0; i< this.props.dishes.length;i++){
+            console.log(this.props.dishes[i].name);
+        }
+        */
 
         this.props.actions.saveDish(this.state.dish).then(()=>toastr.success('Dish saved'))
         .catch(error=> {toastr.error(error);});
 }
 
-    saveToLocalStorage(name, price, img) {
-        let newDish = [];
-        // make a unique key to refer to entries!
-        key++;
-        let trueKey = "" + key + name;
-        // nothing added yet
-        if(JSON.parse(localStorage.getItem("dishes")) === null) {
-            newDish = [];
-        }
-        else {
-            newDish = JSON.parse(localStorage.getItem("dishes"));
-        }
-        newDish.push({key: trueKey, name: name, price: price, img: img});
-        localStorage.setItem("dishes", JSON.stringify(newDish));
-    }
-
-    // if you want to pass in the dish as an obj...
-    saveToLocalStorageDish(dish) {
-
-    }
 
     render() {
         return (
             <div className="selectionR">
                 <div className="itemInfoR">
-                    <img className="food_image" src={this.state.img} alt="a picture of the product" width="300" height="230" />
-                    <p><b>{this.state.name}</b></p>
-                    <p>${this.state.price}</p>
+                    <img className="food_image" src={this.props.img} alt="a picture of the product" width="300" height="230" />
+                    <p><b>{this.props.name}</b></p>
+                    <p>${this.props.price}</p>
                     <form className="amount">
                         Amount:<br />
                         <input type="text" name="amount" />
                         <br />
                     </form>
-                    <button onClick={() => this.saveDishToStore(this.state.name, this.state.price, this.state.img)}
+                    <button onClick={()=>this.saveDishToStore()}
                         className="button_orange" > add to cart </button>
                 </div>
             </div>
@@ -80,20 +57,17 @@ class ManageRestaurantDetailPage extends React.Component {
 
 ManageRestaurantDetailPage.propTypes = {
     dish: PropTypes.object.isRequired
-    /*,
-    img: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
-    price: PropTypes.string.isRequired,
-    method:PropTypes.string*/
 };
-
+/*
 function getDishById(dishes, id) {
     const dish = dishes.filter(dish => dish.key == id);
     if (dish) return dish[0]; //since filter returns an array, have to grab the first.
     return null;
   }
+  */
 
 function mapStateToProps(state, ownProps) {
+    /*
     const dishKey = null;
     //ownProps.dish.key; // from the path `/course/:id`
   
@@ -105,6 +79,10 @@ function mapStateToProps(state, ownProps) {
     return {
         dish: dish
       };
+      */
+     return {
+        dishes: state.dishes
+     };
 }
 
 function mapDispatchToProps(dispatch) {

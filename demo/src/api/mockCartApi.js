@@ -1,17 +1,18 @@
 import delay from './delay';
 
-const dishes = [];
-
-
-function replaceAll(str, find, replace) {
-  return str.replace(new RegExp(find, 'g'), replace);
+const dishes = [{
+  img:"https://raster-static.postmates.com/?url=http%3A%2F%2Fcom.postmates.img.prod.s3.amazonaws.com%2F4eda44ff-839b-41dd-bf81-dc87cc649d70%2Forig.jpg&quality=90&w=0&h=640&mode=auto&v=4", 
+  name:"Backyard Steak Salad",
+  price:"15.00", 
+  quantity: 1
+},
+{
+  img:"https://raster-static.postmates.com/?url=http%3A%2F%2Fcom.postmates.img.prod.s3.amazonaws.com%2Fad668337-fe64-473f-82c3-cb1404425e52%2Forig.jpg&amp;quality=90&amp;w=0&amp;h=640&amp;mode=auto&amp;v=4"
+  ,name:"BGrilled Chicken Cobb Salad" 
+  ,price:"13.75",
+  quantity: 1
 }
-
-//This would be performed on the server in a real app. Just stubbing in.
-const generateId = (dish) => {
-  return replaceAll(dish.name, ' ', '-');
-};
-
+];
 
 class CartApi{
     static getAllDishes(){
@@ -20,24 +21,20 @@ class CartApi{
               resolve(Object.assign([], dishes));
             }, delay);
           });
-
     }
 
     static addDish(dish){
         dish = Object.assign({}, dish); // to avoid manipulating object passed in.
         return new Promise((resolve, reject) => {
           setTimeout(() => {
-            // Simulate server-side validation
-    
-            if (dish.key) {
-              const existingdishKey = dishes.findIndex(a => a.key == dish.key);
-              dishes.splice(existingdishKey, 1, dish);
-            } else {
-              //Just simulating creation here.
-              //The server would generate ids and watchHref's for new courses in a real app.
-              //Cloning so copy returned is passed by value rather than by reference.
-              dish.key = generateId(dish);
-              //dish.watchHref = `http://www.pluralsight.com/courses/${course.id}`;
+            const existingdishKey = dishes.findIndex(a => a.name == dish.name);
+            // If this dish is in cart
+            if (existingdishKey!=-1){
+              alert("Adding duplicate dishes! New Quantity is: "+ (dishes[existingdishKey].quantity+1));
+              dishes[existingdishKey].quantity+=1;
+            }
+            else{
+              alert("NEW DISE ADDED TO CART!");
               dishes.push(dish);
             }
             resolve(dish);
