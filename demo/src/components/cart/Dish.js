@@ -23,7 +23,7 @@ class Dish extends React.Component{
                         </div>
       
                 </div>
-            <p className = "e1"> {"total price is $"+ this.props.price}</p>
+            <p className = "e1"> {"dish price is $"+ this.props.price}</p>
             </div>
         </li>
     );

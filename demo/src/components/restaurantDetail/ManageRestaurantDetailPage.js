@@ -14,7 +14,7 @@ class ManageRestaurantDetailPage extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            dish: {name: this.props.name, price: this.props.price, img: this.props.img, quantity: 1}
+            dish: {name: this.props.name, price: this.props.price, img: this.props.img, quantity: 0}
           };
         
           this.updateQuantity = this.updateQuantity.bind(this);
@@ -25,6 +25,7 @@ class ManageRestaurantDetailPage extends React.Component {
     saveDishToStore(){
         /* For Debugging */
         console.log("Before Adding:");
+        console.log("quantity is now "+this.state.dish.quantity);
         for(let i=0; i< this.props.dishes.length;i++){
             console.log(this.props.dishes[i]);
         }
