@@ -38,16 +38,12 @@ class CartApi{
 
     }
 
-    static deletedish(dish){
-      alert(dish.name);
+    static deleteDish(dish){
         return new Promise((resolve, reject) => {
             setTimeout(() => {
-
-              const dishKeyToDelete = dishes.findIndex(dish => {
-                return dish.name == name;
-              });
+              const dishKeyToDelete = dishes.findIndex(a => a.name == dish.name);
               dishes.splice(dishKeyToDelete, 1);
-              resolve();
+              resolve(dish);
             }, delay);
           });  
     }

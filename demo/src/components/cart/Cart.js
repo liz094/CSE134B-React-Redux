@@ -19,7 +19,9 @@ class Cart extends React.Component {
     }
 
     removeDish(dish){
+        let dummy = [...this.state.dishes.filter(dishtemp => dishtemp.name !== dish.name)];
         this.props.actions.deleteDish(dish).then(()=>toastr.success('Dish deleted'));
+        this.setState({dishes: dummy});
     }
 
     render() {

@@ -46,7 +46,7 @@ export function updateDish(dish){
 export function deleteDish(dish){
   return function(dispatch,getState){
     dispatch(beginAjaxCall());
-    return CartApi.deletedish(dish).then(dish => {
+    return CartApi.deleteDish(dish).then(dish => {
       dispatch(removeDishSuccess(dish)) ;
     });
   };
