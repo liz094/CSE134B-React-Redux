@@ -32,11 +32,14 @@ class CartApi{
             const existingdishKey = dishes.findIndex(a => a.name == dish.name);
             // If this dish is in cart
             if (existingdishKey!=-1){
-              alert("Adding duplicate dishes! New Quantity is: "+ (dishes[existingdishKey].quantity+1));
-              dishes[existingdishKey].quantity+=1;
+              alert("Adding duplicate dishes! New Quantity is: "+ (dishes[existingdishKey].quantity));
+              let newDish = Object.assign([], dishes[existingdishKey]);
+              newDish['quantity'] += 1;
+              dishes.splice(existingdishKey, 1, newDish);
             }
             else{
               alert("NEW DISE ADDED TO CART!");
+              dish.quantity=1;
               dishes.push(dish);
             }
             resolve(dish);
@@ -55,9 +58,7 @@ class CartApi{
               const existingdishKey = dishes.findIndex(a => a.key == dish.key);
               dishes.splice(existingdishKey, 1, dish);
             } 
-
             // if dish amount is 0, remove and update cart and total
-    
             resolve(dish);
           }, delay);
         });
