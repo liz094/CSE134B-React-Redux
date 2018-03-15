@@ -1,6 +1,6 @@
 import React, {PropTypes} from 'react';
 import {Link, IndexLink} from 'react-router';
-import "../../styles/checkout.css";
+import css from "../../styles/checkout.css";
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import * as cartActions from '../../actions/cartActions';
@@ -52,14 +52,14 @@ remove(id){
                 }
             </p>
             
-            <h1 className="page_heading">Checkout</h1>
+            <h1 className={css.page_heading}>Checkout</h1>
         </div>
 
-        <div className="address">
+        <div className={css.address}>
             <div className="block_heading" >
                 <p>Delivery Address</p>
             </div>
-            <form className="delivery_address">
+            <form className={css.delivery_address}>
             Address line 1:
                 <input type="text" name="address1"/>
                 <br/>
@@ -89,7 +89,7 @@ remove(id){
         </div>
         */}
 
-        <div className="paymentInfo">
+        <div className={css.paymentInfo}>
             <div className="block_heading" >
                 <p>Payment Info </p>
             </div>

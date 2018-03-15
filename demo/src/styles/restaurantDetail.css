@@ -1,4 +1,10 @@
-﻿.logo{
+﻿p, body, html {
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+}
+
+
+.logo{
 
     font-family: fantasy;
     font-size: 30px;  
