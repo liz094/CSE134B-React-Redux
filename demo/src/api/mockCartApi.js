@@ -29,9 +29,10 @@ class CartApi{
         return new Promise((resolve, reject) => {
           setTimeout(() => {
             // If this dish is in cart
-            //dish.quantity = dishes[dish.index].quantity;
             dishes.splice(dish.index, 1, dish);
-            // if dish amount is 0, remove and update cart and total
+            // consider TODO if dish amount is 0, remove and update cart and total
+
+            
             resolve(dish);
           }, delay);
         });

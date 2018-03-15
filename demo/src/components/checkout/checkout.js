@@ -1,14 +1,23 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import {Link, IndexLink} from 'react-router';
 import "../../styles/checkout.css";
-import Total from '../cart/Total'
+import {bindActionCreators} from 'redux';
+import {connect} from 'react-redux';
+import * as cartActions from '../../actions/cartActions';
+import Total from '../cart/Total';
 
 
 
-class CheckoutPage extends React.Component {
+export class CheckoutPage extends React.Component {
 
+    constructor(props) {
+        super(props);
+        this.state = {
+            dishes: this.props.dishes
+        };
+    }
 
-
+/*
 remove(id){
 
     let i = parseInt(id);
@@ -16,7 +25,7 @@ remove(id){
     let child = document.getElementById(id);
     msg_boxes.removeChild(child);
 
-}
+}*/
 
     render() {
       return (
@@ -66,6 +75,11 @@ remove(id){
             </form>
         </div>
 
+
+        <div className="total" id="total" ref = "total">
+            <Total list={this.state.dishes}/>
+        </div>
+{/*
         <div className="total">
             <p> Subtotal: $17.00</p>
             <p> Estimated Tax:$1.32</p>
@@ -73,6 +87,7 @@ remove(id){
             <p> </p>
             <p className="est.total"> <b>Estimated Total:     $23.32</b></p>
         </div>
+        */}
 
         <div className="paymentInfo">
             <div className="block_heading" >
@@ -135,4 +150,20 @@ remove(id){
     }
 }
 
-export default CheckoutPage;
+function mapStateToProps(state, ownProps) {
+    return {
+        dishes: state.dishes
+    };
+}
+function mapDispatchToProps(dispatch) {
+    return {
+        actions: bindActionCreators(cartActions, dispatch)
+    };
+  }
+
+  CheckoutPage.propTypes={
+    dishes : PropTypes.array.isRequired
+  }
+
+export default connect(mapStateToProps,mapDispatchToProps)(CheckoutPage);
+
