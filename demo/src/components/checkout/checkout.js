@@ -137,7 +137,7 @@ remove(id){
             </p>
         </div>
 
-        <div className="footer">
+        <div className="footerFixed">
             <a id="about_us" href="https://www.google.com"> About Us</a>
             <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
             <a id="contact" href="https://www.google.com"> Contact</a>

@@ -44,7 +44,7 @@ class Cart extends React.Component {
                 <CartList dishList={this.state.dishes} remove={(dish)=>this.removeDish(dish)}/>
             </ul>
             </div>
-            <div className="footer">
+            <div className="footerFixed">
             <Link id="about_us" to="https://www.google.com"> About Us</Link>
             <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
             <Link id="contact" to="https://www.google.com"> Contact</Link>
