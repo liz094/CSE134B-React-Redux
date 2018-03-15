@@ -7,7 +7,7 @@ const Total = ({list}) => {
     let i =0;
     let price =0;
     for (i =0; i< list.length; i++){
-        price += parseFloat(list[i].price);
+        price += parseFloat(list[i].price*list[i].quantity);
     }
     return (        
         <div>

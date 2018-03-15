@@ -28,7 +28,7 @@ class Dish extends React.Component{
         </li>
     );
     }// end of render
-};
+}
 
 Dish.propTypes = {
     name: PropTypes.string.isRequired,

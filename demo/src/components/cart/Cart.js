@@ -29,7 +29,7 @@ class Cart extends React.Component {
             <div>
             <div id="first_line_cart">
             <h1>
-                <Link to= "restaurants" title="back" className="back">back</Link>
+                <Link to= "restaurantA" title="back" className="back">back</Link>
                 Shopping Cart
                 <span>
                 <Link to="checkout" title="to check out" className="sign_up"> Check out</Link>

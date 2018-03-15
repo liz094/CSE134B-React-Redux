@@ -1,6 +1,7 @@
 import React from 'react';
 import {Link, IndexLink} from 'react-router';
 import "../../styles/checkout.css";
+import Total from '../cart/Total'
 
 
 
