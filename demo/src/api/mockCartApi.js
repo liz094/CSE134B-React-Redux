@@ -1,19 +1,6 @@
 import delay from './delay';
 
 const dishes = [
-  /*{
-  img:"https://raster-static.postmates.com/?url=http%3A%2F%2Fcom.postmates.img.prod.s3.amazonaws.com%2F4eda44ff-839b-41dd-bf81-dc87cc649d70%2Forig.jpg&quality=90&w=0&h=640&mode=auto&v=4", 
-  name:"Backyard Steak Salad",
-  price:"15.00", 
-  quantity: 1
-},
-{
-  img:"https://raster-static.postmates.com/?url=http%3A%2F%2Fcom.postmates.img.prod.s3.amazonaws.com%2Fad668337-fe64-473f-82c3-cb1404425e52%2Forig.jpg&amp;quality=90&amp;w=0&amp;h=640&amp;mode=auto&amp;v=4"
-  ,name:"BGrilled Chicken Cobb Salad" 
-  ,price:"13.75",
-  quantity: 1
-}
-*/
 ];
 
 class CartApi{
@@ -32,17 +19,26 @@ class CartApi{
             const existingdishKey = dishes.findIndex(a => a.name == dish.name);
             // If this dish is in cart
             if (existingdishKey!=-1){
-              alert("Adding duplicate dishes! New Quantity is: "+ (dishes[existingdishKey].quantity));
-              let newDish = Object.assign([], dishes[existingdishKey]);
-              newDish['quantity'] += 1;
+              //Buggy version
+              dishes[existingdishKey].quantity+= 1;
+              /* We need these codes to force immutability, but does not work for me
+              let newDish = {}
+              newDish.quantity=dish.quantity+1;
+              newDish.name=dish.name;
+              newDish.price=dish.price;
+              newDish.img=dish.img;
               dishes.splice(existingdishKey, 1, newDish);
+              */
             }
             else{
-              alert("NEW DISE ADDED TO CART!");
-              dish.quantity=1;
               dishes.push(dish);
             }
             resolve(dish);
+            /*For debugging*/
+            for( let i =0; i< dishes.length;i++){
+              console.log(dishes[i]);
+            }
+            console.log(".........................");
           }, delay);
         });
     }
@@ -57,7 +53,7 @@ class CartApi{
             if (dish.key) {
               const existingdishKey = dishes.findIndex(a => a.key == dish.key);
               dishes.splice(existingdishKey, 1, dish);
-            } 
+            }
             // if dish amount is 0, remove and update cart and total
             resolve(dish);
           }, delay);

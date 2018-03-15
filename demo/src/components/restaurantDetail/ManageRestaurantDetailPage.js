@@ -14,23 +14,21 @@ class ManageRestaurantDetailPage extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            dish: {name: this.props.name, price: this.props.price, img: this.props.img}
+            dish: {name: this.props.name, price: this.props.price, img: this.props.img, quantity: this.props.quantity}
           };
-
     }
 
     /** method to save a dish to cart by dispatching a save dish action */
     //TODO take amount as a parameter
     saveDishToStore(){
-        alert("CART LENGTH IS: "+ this.props.dishes.length)
-        alert("ADD to CART: "+ this.state.dish.name)
-        /* For Testing 
+        /* For Debugging */
+        console.log("Before Adding: ");
         for(let i=0; i< this.props.dishes.length;i++){
-            console.log(this.props.dishes[i].name);
+            console.log(this.props.dishes[i]);
         }
-        */
+        console.log("~~~~~~~~~~~~~~~~~~");
 
-        this.props.actions.saveDish(this.state.dish);
+        this.props.actions.saveDish(this.state.dish).then(()=>toastr.success('Dish saved'));
 }
 
 
@@ -55,30 +53,13 @@ class ManageRestaurantDetailPage extends React.Component {
 }
 
 ManageRestaurantDetailPage.propTypes = {
-    dish: PropTypes.object.isRequired
+    img: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    price: PropTypes.string.isRequired,
+    method: PropTypes.string,
 };
-/*
-function getDishById(dishes, id) {
-    const dish = dishes.filter(dish => dish.key == id);
-    if (dish) return dish[0]; //since filter returns an array, have to grab the first.
-    return null;
-  }
-  */
 
 function mapStateToProps(state, ownProps) {
-    /*
-    const dishKey = null;
-    //ownProps.dish.key; // from the path `/course/:id`
-  
-    let dish = {key: '', name: '', img: '', price: ''};
-  
-    if (dishKey && state.dishes.length > 0) {
-      dish = getDishById(state.dishes, dishKey);
-    }
-    return {
-        dish: dish
-      };
-      */
      return {
         dishes: state.dishes
      };

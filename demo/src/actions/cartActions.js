@@ -11,6 +11,7 @@ export function loadTotalSuccess(dishes){
 }
 
 export function addDishSuccess(dish) {
+
   return {type: types.ADD_DISH_SUCCESS, dish};
 }
 
@@ -38,10 +39,7 @@ export function saveDish(dish){
         dispatch(beginAjaxCall());
         return CartApi.addDish(dish).then(dish => {
             dispatch(addDishSuccess(dish));
-        }).catch(error => {
-            dispatch(ajaxCallError(error));
-            throw(error);
-          });
+        });
         };
       }
 

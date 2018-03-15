@@ -1,48 +1,20 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import {IndexLink, Link} from 'react-router';
 import '../../styles/cart.css';
 import CartList from './CartList';
 import Total from './Total';
 import Dish from './Dish';
+import {bindActionCreators} from 'redux';
+import {connect} from 'react-redux';
+import * as cartActions from '../../actions/cartActions';
 
 class Cart extends React.Component {
     constructor(props) {
         super(props);
-        /*
-        this.state = { dishes:[ {name: "Backyard Steak Salad", price:"15.00", img: "https://raster-static.postmates.com/?url=http%3A%2F%2Fcom.postmates.img.prod.s3.amazonaws.com%2F4eda44ff-839b-41dd-bf81-dc87cc649d70%2Forig.jpg&quality=90&w=0&h=640&mode=auto&v=4"},
-                            {name: "BGrilled Chicken Cobb Salad", price: "13.75", img: "https://raster-static.postmates.com/?url=http%3A%2F%2Fcom.postmates.img.prod.s3.amazonaws.com%2Fad668337-fe64-473f-82c3-cb1404425e52%2Forig.jpg&amp;quality=90&amp;w=0&amp;h=640&amp;mode=auto&amp;v=4"},
-                            {name: "BGrilled Chicken Cobb Salad2", price: "13.75", img: "https://raster-static.postmates.com/?url=http%3A%2F%2Fcom.postmates.img.prod.s3.amazonaws.com%2Fad668337-fe64-473f-82c3-cb1404425e52%2Forig.jpg&amp;quality=90&amp;w=0&amp;h=640&amp;mode=auto&amp;v=4"}]};
-        */
-
-        let ls = JSON.parse(localStorage.getItem("dishes"));
-        if (ls==null){
-            ls = [];  
-        }
-        let dummy = []; 
-        let i = 0;
-        
-        for ( i=0 ;i< ls.length; i++){
-            let dish = ls[i];
-            let j =0;
-            let length = dummy.length+1;
-            for (j=0; j< length; j++){
-                if (dummy[j] != undefined && dummy[j].name==dish.name){
-                    dummy[j].quantity++;
-                }
-                else{
-                    dummy.push({name:dish.name, price: dish.price, img: dish.img, quantity:1});
-                    break;
-                }
-            }
-        }
-
-        this.state = {
-        // get the dishes from localStorage   
-        // TODO: figure out why its not displaying duplicates
-        //dishes: JSON.parse(localStorage.getItem("dishes"))
-        dishes: dummy};
-
         this.remove = this.remove.bind(this);
+        this.state = {
+            dishes: this.props.dishes
+        }
     }
     
     remove(name){
@@ -54,12 +26,7 @@ class Cart extends React.Component {
                 this.setState({dishes: newDish});
             }
         }
-        // not sure if this will work
-        localStorage.setItem("dishes", JSON.stringify(newDish));
         return newDish;
-    }
-    add(name, price, img){
-        this.setState({dishes: this.state.dishes.push({name, price, img})});
     }
 
     render() {
@@ -79,7 +46,6 @@ class Cart extends React.Component {
             </div>
             <div className="container_cart">
             <ul id="myUL">
-            
                 <CartList dishList={this.state.dishes} remove={this.remove}/>
             </ul>
             </div>
@@ -93,4 +59,16 @@ class Cart extends React.Component {
     }
 }
 
-export default Cart;
+function mapStateToProps(state, ownProps) {
+    return {
+        dishes: state.dishes
+    };
+}
+function mapDispatchToProps(dispatch) {
+    return {
+      actions: bindActionCreators(cartActions, dispatch)
+    };
+  }
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(Cart);
