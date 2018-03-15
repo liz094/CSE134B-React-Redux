@@ -7,6 +7,7 @@ export default function cartReducer(state = initialState.dishes, action) {
       return action.dishes;
 
     case types.ADD_DISH_SUCCESS:
+      alert('adding dish now: '+state.dish);
       return [
         ...state,
         Object.assign({}, action.dish)

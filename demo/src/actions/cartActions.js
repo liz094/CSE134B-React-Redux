@@ -37,7 +37,6 @@ export function saveDish(dish){
     return function (dispatch, getState){
         dispatch(beginAjaxCall());
         return CartApi.addDish(dish).then(dish => {
-            dish.key? dispatch(updateDishSuccess(dish)):
             dispatch(addDishSuccess(dish));
         }).catch(error => {
             dispatch(ajaxCallError(error));
