@@ -19,7 +19,7 @@ class Dish extends React.Component{
                         <br />
                         <br />
                         <br />
-                        <button onClick = {()=> this.props.removeFunc(this.props.name)}> remove </button>
+                        <button onClick = {()=> this.props.removeFunc(this.props)}> remove </button>
                         </div>
       
                 </div>

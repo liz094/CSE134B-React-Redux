@@ -12,10 +12,8 @@ let logoStyle = {
 class tenderGreens extends React.Component {
     render() {
       return (
-
         <div>
             <title> Tender Greens</title>
-
             <div id="headerR">
                 <IndexLink to ="/" className = "logo">DejaDelivery</IndexLink>
                 <div id="cartlogout">

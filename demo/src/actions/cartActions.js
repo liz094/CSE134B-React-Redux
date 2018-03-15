@@ -20,19 +20,10 @@ export function updateDishSuccess(dish){
 }
 
 export function removeDishSuccess(dish) {
+
   return {type: types.REMOVE_DISH_SUCCESS, dish};
 }
 
-export function loadCart(){
-    return function(dispatch){
-        dispatch(beginAjaxCall());
-        return CartApi.getAllDishes().then(dishes=>{
-            dispatch(loadCartSuccess(dishes));
-        }).catch(error => {
-            throw(error);
-        })
-    }
-}
 
 export function saveDish(dish){
     return function (dispatch, getState){
@@ -43,14 +34,20 @@ export function saveDish(dish){
         };
       }
 
+export function updateDish(dish){
+  return function (dispatch, getState){
+      dispatch(beginAjaxCall());
+      return CartApi.updateDish(dish).then(dish => {
+          dispatch(updateDishSuccess(dish));
+      });
+      };
+    }
+
 export function deleteDish(dish){
   return function(dispatch,getState){
     dispatch(beginAjaxCall());
-    return CartApi.deleteDish(dish.key).then(() => {
-      alert(`deleted ${dish.key}`)
+    return CartApi.deletedish(dish).then(dish => {
       dispatch(removeDishSuccess(dish)) ;
-    }).catch(error => {
-      throw(error);
     });
   };
 }

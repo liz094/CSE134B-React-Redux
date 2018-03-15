@@ -27,9 +27,15 @@ class ManageRestaurantDetailPage extends React.Component {
             console.log(this.props.dishes[i]);
         }
         console.log("~~~~~~~~~~~~~~~~~~");
-
-        this.props.actions.saveDish(this.state.dish).then(()=>toastr.success('Dish saved'));
-}
+        const existingdishKey = this.props.dishes.findIndex(a => a.name == this.state.dish.name);
+        if (existingdishKey==-1){
+            this.props.actions.saveDish(this.state.dish).then(()=>toastr.success('Dish saved'));
+        }
+        else{
+            this.state.dish.index = existingdishKey;
+            this.props.actions.updateDish(this.state.dish).then(()=>toastr.success('Dish saved'));
+        }
+    }
 
 
     render() {

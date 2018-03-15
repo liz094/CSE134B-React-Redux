@@ -14,13 +14,13 @@ export default function cartReducer(state = initialState.dishes, action) {
 
     case types.UPDATE_DISH_SUCCESS:
       return [
-        ...state.filter(dish => dish.key !== action.dish.key),
+        ...state.filter(dish => dish.name !== action.dish.name),
         Object.assign({}, action.dish)
       ];
 
     case types.REMOVE_DISH_SUCCESS:
       return[  
-        ...state.filter(dish => dish.key !== action.dish.key)
+        ...state.filter(dish => dish.name !== action.dish.name)
       ];
 
     default:

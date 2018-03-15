@@ -7,26 +7,19 @@ import Dish from './Dish';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import * as cartActions from '../../actions/cartActions';
+import toastr from 'toastr';
 
 class Cart extends React.Component {
     constructor(props) {
         super(props);
-        this.remove = this.remove.bind(this);
         this.state = {
             dishes: this.props.dishes
-        }
+        };
+        this.remove = this.removeDish.bind(this);
     }
-    
-    remove(name){
-        let i =0;
-        let newDish = this.state.dishes;
-        for (i =0; i< this.state.dishes.length; i++){
-            if (name==this.state.dishes[i].name){
-                newDish.splice(i, 1);
-                this.setState({dishes: newDish});
-            }
-        }
-        return newDish;
+
+    removeDish(dish){
+        this.props.actions.deleteDish(dish).then(()=>toastr.success('Dish deleted'));
     }
 
     render() {
@@ -46,7 +39,7 @@ class Cart extends React.Component {
             </div>
             <div className="container_cart">
             <ul id="myUL">
-                <CartList dishList={this.state.dishes} remove={this.remove}/>
+                <CartList dishList={this.state.dishes} remove={(dish)=>this.removeDish(dish)}/>
             </ul>
             </div>
             <div className="footer">
@@ -66,7 +59,7 @@ function mapStateToProps(state, ownProps) {
 }
 function mapDispatchToProps(dispatch) {
     return {
-      actions: bindActionCreators(cartActions, dispatch)
+        actions: bindActionCreators(cartActions, dispatch)
     };
   }
 
