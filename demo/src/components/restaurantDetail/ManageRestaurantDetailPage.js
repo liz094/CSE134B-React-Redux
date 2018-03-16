@@ -14,7 +14,7 @@ class ManageRestaurantDetailPage extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            dish: {name: this.props.name, price: this.props.price, img: this.props.img, quantity: 0}
+            dish: {name: this.props.name, price: this.props.price, img: this.props.img, quantity: 1}
           };
         
           this.updateQuantity = this.updateQuantity.bind(this);

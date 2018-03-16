@@ -17,7 +17,7 @@ class CartApi{
         return new Promise((resolve, reject) => {
           setTimeout(() => {
               dish.added = true;
-              dish.quantity=1;
+              dish.quantity= dish.quantity;
               dishes.push(dish);
             resolve(dish);
           }, delay);
