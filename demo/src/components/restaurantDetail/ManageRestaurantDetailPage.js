@@ -14,7 +14,7 @@ class ManageRestaurantDetailPage extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            dish: {name: this.props.name, price: this.props.price, img: this.props.img, quantity: 1}
+            dish: {name: this.props.name, price: this.props.price, img: this.props.img, quantity: 0}
           };
         
           this.updateQuantity = this.updateQuantity.bind(this);
@@ -24,19 +24,11 @@ class ManageRestaurantDetailPage extends React.Component {
     //TODO take amount as a parameter
     saveDishToStore(){
         /* For Debugging */
-        console.log("Before Adding:");
-        console.log("quantity is now "+this.state.dish.quantity);
-        for(let i=0; i< this.props.dishes.length;i++){
-            console.log(this.props.dishes[i]);
-        }
-        console.log("~~~~~~~~~~~~~~~~~~");
         const existingdishKey = this.props.dishes.findIndex(a => a.name == this.state.dish.name);
         if (existingdishKey==-1){
-            alert("ADD NEW");
             this.props.actions.saveDish(this.state.dish).then(()=>toastr.success('Dish saved'));
         }
         else{
-            alert("UPDATE");
             this.state.dish.index = existingdishKey;
             this.props.actions.updateDish(this.state.dish).then(()=>toastr.success('Dish saved'));
         }
@@ -57,20 +49,13 @@ class ManageRestaurantDetailPage extends React.Component {
             dish: {prevState.name,prevState.price, prevState.img, event.target.value}
         });*/
 
-        
-
         // const quantity = event.target.value ;
         // //+ dish[quantity];
         // console.log("quantity should now be"+quantity);
         let dish = Object.assign({},this.state.dish);
-        let q = Number.parseInt(dish.quantity)
-        q = q + Number.parseInt(event.target.value);
+        let q = Number.parseInt(event.target.value);
         dish.quantity = q;   // add quantity number of dishes
-
-        console.log("quantity is now "+dish.quantity);
         return this.setState({dish:dish});
-
-
     }
 
 

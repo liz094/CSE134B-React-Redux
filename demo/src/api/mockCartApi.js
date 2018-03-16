@@ -17,6 +17,7 @@ class CartApi{
         return new Promise((resolve, reject) => {
           setTimeout(() => {
               dish.added = true;
+              dish.quantity=1;
               dishes.push(dish);
             resolve(dish);
           }, delay);
@@ -30,7 +31,7 @@ class CartApi{
           setTimeout(() => {
             // If this dish is in cart
             const existingdishKey = dishes.findIndex(a => a.name == dish.name);
-            dish.quantity= dishes[existingdishKey].quantity+1;
+            dish.quantity= dishes[existingdishKey].quantity+ dish.quantity;
             dishes.splice(existingdishKey, 1, dish);
             // consider TODO if dish amount is 0, remove and update cart and total
             resolve(dish);
